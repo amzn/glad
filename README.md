@@ -1,6 +1,36 @@
-## My Project
+## GLAD (Generted Layer Architecture Diagram)
 
-TODO: Fill this README out!
+Automaticaly generate **layer diagram** view of your Javascript/Typescript source code dependencies.
+
+## Motivation
+
+Self-contained, Lightweight, and Fast.
+
+## Code style
+
+100% ESLint clean
+using ![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)
+
+## Example
+
+![example](poster.svg)
+
+# Tech/Framework used
+
+Works for your JS/TS projects, simply launch the app and open the resulting poster.svg file.
+
+Built with:
+
+- [NodeJS](https://electron.atom.io)
+- [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+- [TS-morph](https://ts-morph.com/)
+- [SVG](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics)
+- [JSON](https://en.wikipedia.org/wiki/JSON)
+
+# Features
+
+Customized the rendering, choose between 4 types of view Posters, Layers or Grid, with or without edges.
+
 
 Be sure to:
 

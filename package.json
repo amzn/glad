@@ -44,7 +44,7 @@
     "test": "mocha",
     "lint": "eslint .",
     "lintfix": "eslint . --fix",
-    "release": "npm install && depcheck . && eslint . && mocha && node cli/index.js -sl -e **/demoApp* && npm run start",
-    "start": "node cli/index.js -l"
+    "release": "npm install && depcheck . && eslint . && mocha && npm run start",
+    "start": "node cli/index.js -sl -e **/demoApp*"
   }
 }

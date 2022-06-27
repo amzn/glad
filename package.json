@@ -1,5 +1,5 @@
 {
-  "name": "@amzn/glad",
+  "name": "@amazon/glad",
   "version": "0.1.0",
   "description": "Generate a Layer Diagram view of your source layers",
   "main": "bin/index.js",

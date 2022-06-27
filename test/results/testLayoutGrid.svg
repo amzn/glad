@@ -1,0 +1,175 @@
+<?xml version="1.0" standalone="no"?>
+<svg width="600" height="320" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif" style="background-color:white">
+  <style>
+    .layerRectangle {
+      stroke: black;
+      stroke-dasharray: 5,5;
+      fill: url('#layers')
+    }
+    .layerText {
+      fill: purple;
+      font-size: 150%;
+      filter: url(#outlineWhite);
+    }
+    .nodeFolder {
+      fill: #aaaaaa33;
+      stroke: whitesmoke;
+    }
+    .nodeFile {
+      fill: #ffffffee;
+      stroke: gray;
+    }
+    .folderName {
+      font-size: 180%;
+      fill : white;
+      font-weight: bolder;
+      text-anchor: start;
+      letter-spacing : 1px;
+      dominant-baseline: hanging;
+      filter: url(#shadow);
+    }
+    .nodeName {
+      fill : black;
+      font-weight: bold;
+      text-anchor: middle;
+      dominant-baseline: central;
+      filter: url(#outlineWhite);
+    }
+    .line {
+      fill : none;
+      stroke-width: 3;
+      opacity: 0.5;
+    }
+    .line:hover {
+      stroke-width: 6;
+      opacity: 1;
+    }
+
+    </style>
+  <defs id='idSvgDef'>
+    <linearGradient id="layers" gradientTransform="rotate(90)">
+      <stop offset="0%"  stop-color="rgba(105, 24, 114, 0.10)"/>
+      <stop offset="100%" stop-color="rgba(105, 24, 114, 0.30)" />
+    </linearGradient>
+    <filter id="shadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="1" dy="1" result="offsetblur"/>
+      <feFlood flood-color="black"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="outlineWhite">
+      <feMorphology in="SourceAlpha" result="DILATED" operator="dilate" radius="2"/>
+      <feFlood flood-color="#ffffffaa" flood-opacity="1" result="WHITE"/>
+      <feComposite in="WHITE" in2="DILATED" operator="in" result="OUTLINE"/>
+      <feMerge>
+        <feMergeNode in="OUTLINE" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="outlineBlack">
+      <feMorphology in="SourceAlpha" result="DILATED" operator="dilate" radius="2"/>
+      <feFlood flood-color="#000000aa" flood-opacity="1" result="BLACK"/>
+      <feComposite in="BLACK" in2="DILATED" operator="in" result="OUTLINE"/>
+      <feMerge>
+        <feMergeNode in="OUTLINE"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id='lineEnd' viewBox= '0 -5 30 10' refX='12' orient='auto'>
+      <path d='M0,-16L32,0L0,16' fill='#3058FFaa'/>
+    </marker>
+    <marker id='lineStart' viewBox= '0 -4 8 8' refX='4' orient='auto'>
+      <circle cx='4' r='4' fill='#377E22aa'/>
+    </marker>
+  </defs>
+  <g id='Node_Barn2'>
+    <rect x="4" y="4" width="292" height="72" rx="8" ry="8" class="nodeFile"/>
+  </g>
+  <g id='Node_PersonA'>
+    <rect x="304" y="4" width="292" height="72" rx="8" ry="8" class="nodeFile"/>
+  </g>
+  <g id='Node_Potato'>
+    <rect x="4" y="84" width="292" height="72" rx="8" ry="8" class="nodeFile"/>
+  </g>
+  <g id='Node_Yam'>
+    <rect x="304" y="84" width="292" height="72" rx="8" ry="8" class="nodeFile"/>
+  </g>
+  <g id='Node_Chickens'>
+    <rect x="4" y="164" width="292" height="72" rx="8" ry="8" class="nodeFile"/>
+  </g>
+  <g id='Node_PersonB'>
+    <rect x="304" y="164" width="292" height="72" rx="8" ry="8" class="nodeFile"/>
+  </g>
+  <g id='Edges'>
+    <path class="line" d="M280 60 C 290 120,10 120, 20 180" fill="none" stroke="#377E2288" />
+    <path class="line" d="M580 60 C 590 120,310 120, 320 180" fill="none" stroke="#377E2288" />
+    <path class="line" d="M280 140 C 290 120,310 120, 320 100" fill="none" stroke="#EB4132" />
+    <path class="line" d="M580 140 C 590 120,10 120, 20 100" fill="none" stroke="#EB4132" />
+  </g>
+  <g id='Counters_Barn2'>
+    <g>
+      <circle cx="280" cy="60" r="10" fill="green"/>
+      <text x="280" y="60" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+    </g>
+  </g>
+  <g id='Counters_PersonA'>
+    <g>
+      <circle cx="580" cy="60" r="10" fill="green"/>
+      <text x="580" y="60" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+    </g>
+  </g>
+  <g id='Counters_Potato'>
+    <g>
+      <circle cx="280" cy="140" r="10" fill="green"/>
+      <text x="280" y="140" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+    </g>
+    <g>
+      <circle cx="20" cy="100" r="10" fill="blue"/>
+      <text x="20" y="100" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+    </g>
+  </g>
+  <g id='Counters_Yam'>
+    <g>
+      <circle cx="580" cy="140" r="10" fill="green"/>
+      <text x="580" y="140" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+    </g>
+    <g>
+      <circle cx="320" cy="100" r="10" fill="blue"/>
+      <text x="320" y="100" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+    </g>
+  </g>
+  <g id='Counters_Chickens'>
+    <g>
+      <circle cx="20" cy="180" r="10" fill="blue"/>
+      <text x="20" y="180" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+    </g>
+  </g>
+  <g id='Counters_PersonB'>
+    <g>
+      <circle cx="320" cy="180" r="10" fill="blue"/>
+      <text x="320" y="180" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+    </g>
+  </g>
+  <g id='Labels_Barn2'>
+    <text class="nodeName" x="150" y="40" font-size="120%">Barn2</text>
+  </g>
+  <g id='Labels_PersonA'>
+    <text class="nodeName" x="450" y="40" font-size="120%">PersonA</text>
+  </g>
+  <g id='Labels_Potato'>
+    <text class="nodeName" x="150" y="120" font-size="120%">Potato</text>
+  </g>
+  <g id='Labels_Yam'>
+    <text class="nodeName" x="450" y="120" font-size="120%">Yam</text>
+  </g>
+  <g id='Labels_Chickens'>
+    <text class="nodeName" x="150" y="200" font-size="120%">Chickens</text>
+  </g>
+  <g id='Labels_PersonB'>
+    <text class="nodeName" x="450" y="200" font-size="120%">PersonB</text>
+  </g>
+</svg>

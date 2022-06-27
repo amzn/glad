@@ -1,0 +1,239 @@
+<?xml version="1.0" standalone="no"?>
+<svg width="1040" height="520" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif" style="background-color:white">
+  <style>
+    .layerRectangle {
+      stroke: black;
+      stroke-dasharray: 5,5;
+      fill: url('#layers')
+    }
+    .layerText {
+      fill: purple;
+      font-size: 150%;
+      filter: url(#outlineWhite);
+    }
+    .nodeFolder {
+      fill: #aaaaaa33;
+      stroke: whitesmoke;
+    }
+    .nodeFile {
+      fill: #ffffffee;
+      stroke: gray;
+    }
+    .folderName {
+      font-size: 180%;
+      fill : white;
+      font-weight: bolder;
+      text-anchor: start;
+      letter-spacing : 1px;
+      dominant-baseline: hanging;
+      filter: url(#shadow);
+    }
+    .nodeName {
+      fill : black;
+      font-weight: bold;
+      text-anchor: middle;
+      dominant-baseline: central;
+      filter: url(#outlineWhite);
+    }
+    .line {
+      fill : none;
+      stroke-width: 3;
+      opacity: 0.5;
+    }
+    .line:hover {
+      stroke-width: 6;
+      opacity: 1;
+    }
+
+    </style>
+  <defs id='idSvgDef'>
+    <linearGradient id="layers" gradientTransform="rotate(90)">
+      <stop offset="0%"  stop-color="rgba(105, 24, 114, 0.10)"/>
+      <stop offset="100%" stop-color="rgba(105, 24, 114, 0.30)" />
+    </linearGradient>
+    <filter id="shadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="1" dy="1" result="offsetblur"/>
+      <feFlood flood-color="black"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="outlineWhite">
+      <feMorphology in="SourceAlpha" result="DILATED" operator="dilate" radius="2"/>
+      <feFlood flood-color="#ffffffaa" flood-opacity="1" result="WHITE"/>
+      <feComposite in="WHITE" in2="DILATED" operator="in" result="OUTLINE"/>
+      <feMerge>
+        <feMergeNode in="OUTLINE" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="outlineBlack">
+      <feMorphology in="SourceAlpha" result="DILATED" operator="dilate" radius="2"/>
+      <feFlood flood-color="#000000aa" flood-opacity="1" result="BLACK"/>
+      <feComposite in="BLACK" in2="DILATED" operator="in" result="OUTLINE"/>
+      <feMerge>
+        <feMergeNode in="OUTLINE"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id='lineEnd' viewBox= '0 -5 30 10' refX='12' orient='auto'>
+      <path d='M0,-16L32,0L0,16' fill='#3058FFaa'/>
+    </marker>
+    <marker id='lineStart' viewBox= '0 -4 8 8' refX='4' orient='auto'>
+      <circle cx='4' r='4' fill='#377E22aa'/>
+    </marker>
+  </defs>
+  <g id='Node_Farming'>
+    <rect x="4" y="4" width="1032" height="512" rx="2" ry="2" class="nodeFolder"/>
+    <g id='Node_Land'>
+      <rect x="21.5" y="39" width="662" height="292" rx="2" ry="2" class="nodeFolder"/>
+      <g id='Node_Barn1'>
+        <rect x="39" y="74" width="327" height="222" rx="2" ry="2" class="nodeFolder"/>
+        <g id='Node_Potato'>
+          <rect x="56.5" y="109" width="292" height="72" rx="8" ry="8" class="nodeFile"/>
+        </g>
+        <g id='Node_Yam'>
+          <rect x="56.5" y="189" width="292" height="72" rx="8" ry="8" class="nodeFile"/>
+        </g>
+      </g>
+      <g id='Node_Barn2'>
+        <rect x="374" y="74" width="292" height="72" rx="8" ry="8" class="nodeFile"/>
+      </g>
+    </g>
+    <g id='Node_People'>
+      <rect x="691.5" y="39" width="327" height="222" rx="2" ry="2" class="nodeFolder"/>
+      <g id='Node_PersonA'>
+        <rect x="709" y="74" width="292" height="72" rx="8" ry="8" class="nodeFile"/>
+      </g>
+      <g id='Node_PersonB'>
+        <rect x="709" y="154" width="292" height="72" rx="8" ry="8" class="nodeFile"/>
+      </g>
+    </g>
+    <g id='Node_Animals'>
+      <rect x="21.5" y="339" width="627" height="142" rx="2" ry="2" class="nodeFolder"/>
+      <g id='Node_Chickens'>
+        <rect x="39" y="374" width="292" height="72" rx="8" ry="8" class="nodeFile"/>
+      </g>
+      <g id='Node_Cows'>
+        <rect x="339" y="374" width="292" height="72" rx="8" ry="8" class="nodeFile"/>
+      </g>
+    </g>
+  </g>
+  <g id='Edges'>
+    <path class="line" d="M650 130 C 660 260,45 260, 55 390" fill="none" stroke="#377E2288" filter='url(#shadow)'/>
+    <path class="line" d="M985 130 C 995 150,715 150, 725 170" fill="none" stroke="#377E2288" filter='url(#shadow)'/>
+    <path class="line" d="M332.5 165 C 342.5 185,62.5 185, 72.5 205" fill="none" stroke="#EB4132" filter='url(#shadow)'/>
+    <path class="line" d="M332.5 245 C 342.5 185,62.5 185, 72.5 125" fill="none" stroke="#EB4132" filter='url(#shadow)'/>
+  </g>
+  <g id='Edges_Containers'>
+    <path class="line" d="M372.5 315 C 382.5 335,305 335, 315 355" fill="none" stroke="#377E2288" filter='url(#shadow)'/>
+    <g>
+      <circle cx="372.5" cy="315" r="10" fill="green"/>
+      <text x="372.5" y="315" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+    </g>
+    <g>
+      <circle cx="315" cy="355" r="10" fill="blue"/>
+      <text x="315" y="355" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+    </g>
+  </g>
+  <g id='Counters_Farming'>
+    <g id='Counters_Land'>
+      <g id='Counters_Barn1'>
+        <g id='Counters_Potato'>
+          <g>
+            <circle cx="332.5" cy="165" r="10" fill="green"/>
+            <text x="332.5" y="165" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+          </g>
+          <g>
+            <circle cx="72.5" cy="125" r="10" fill="blue"/>
+            <text x="72.5" y="125" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+          </g>
+        </g>
+        <g id='Counters_Yam'>
+          <g>
+            <circle cx="332.5" cy="245" r="10" fill="green"/>
+            <text x="332.5" y="245" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+          </g>
+          <g>
+            <circle cx="72.5" cy="205" r="10" fill="blue"/>
+            <text x="72.5" y="205" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+          </g>
+        </g>
+      </g>
+      <g id='Counters_Barn2'>
+        <g>
+          <circle cx="650" cy="130" r="10" fill="green"/>
+          <text x="650" y="130" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+        </g>
+      </g>
+    </g>
+    <g id='Counters_People'>
+      <g id='Counters_PersonA'>
+        <g>
+          <circle cx="985" cy="130" r="10" fill="green"/>
+          <text x="985" y="130" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+        </g>
+      </g>
+      <g id='Counters_PersonB'>
+        <g>
+          <circle cx="725" cy="170" r="10" fill="blue"/>
+          <text x="725" y="170" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+        </g>
+      </g>
+    </g>
+    <g id='Counters_Animals'>
+      <g id='Counters_Chickens'>
+        <g>
+          <circle cx="55" cy="390" r="10" fill="blue"/>
+          <text x="55" y="390" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+        </g>
+      </g>
+      <g id='Counters_Cows'>
+      </g>
+    </g>
+  </g>
+  <g id='Labels_Farming'>
+    <text class="folderName" x="10" y="10">Farming</text>
+    <text x="10" y="510" font-size="75%">4 folders, 7 files</text>
+    <g id='Labels_Land'>
+      <text class="folderName" x="27.5" y="45">Land</text>
+      <text x="27.5" y="325" font-size="75%">1 folder, 3 files, 1 outgoing, path: .../Farming/</text>
+      <g id='Labels_Barn1'>
+        <text class="folderName" x="45" y="80">Barn1</text>
+        <text x="45" y="290" font-size="75%">2 files, path: .../Farming/Land/</text>
+        <g id='Labels_Potato'>
+          <text class="nodeName" x="202.5" y="145" font-size="120%">Potato</text>
+        </g>
+        <g id='Labels_Yam'>
+          <text class="nodeName" x="202.5" y="225" font-size="120%">Yam</text>
+        </g>
+      </g>
+      <g id='Labels_Barn2'>
+        <text class="nodeName" x="520" y="110" font-size="120%">Barn2</text>
+      </g>
+    </g>
+    <g id='Labels_People'>
+      <text class="folderName" x="697.5" y="45">People</text>
+      <text x="697.5" y="255" font-size="75%">2 files, path: .../Farming/</text>
+      <g id='Labels_PersonA'>
+        <text class="nodeName" x="855" y="110" font-size="120%">PersonA</text>
+      </g>
+      <g id='Labels_PersonB'>
+        <text class="nodeName" x="855" y="190" font-size="120%">PersonB</text>
+      </g>
+    </g>
+    <g id='Labels_Animals'>
+      <text class="folderName" x="27.5" y="345">Animals</text>
+      <text x="27.5" y="475" font-size="75%">2 files, 1 incoming, path: .../Farming/</text>
+      <g id='Labels_Chickens'>
+        <text class="nodeName" x="185" y="410" font-size="120%">Chickens</text>
+      </g>
+      <g id='Labels_Cows'>
+        <text class="nodeName" x="485" y="410" font-size="120%">Cows</text>
+      </g>
+    </g>
+  </g>
+</svg>

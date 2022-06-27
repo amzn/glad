@@ -1,6 +1,6 @@
-## GLAD - *G*enerate *L*ayer *A*rchitecture *D*iagram
+## GLAD - *Generate Layer Architecture Diagram*
 
-Automaticaly generate **layer diagram** view of your Javascript/Typescript source code dependencies.
+Automatically generate **layer diagram** view of your Javascript/Typescript source code dependencies.
 
 ## Motivation
 
@@ -13,29 +13,26 @@ using ![js-standard-style](https://img.shields.io/badge/code%20style-standard-br
 
 ## Example
 
-![example](poster.svg)
+![example](glad.svg)
 
 # Tech/Framework used
 
-Works for your JS/TS projects, simply launch the app and open the resulting poster.svg file.
+Supports JS/TS projects, simply launch the app and open the resulting glad.svg file.
 
 Built with:
 
-- [NodeJS](https://electron.atom.io)
+- [NodeJS](https://nodejs.org/)
 - [Javascript](https://en.wikipedia.org/wiki/JavaScript)
 - [TS-morph](https://ts-morph.com/)
-- [SVG](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics)
 - [JSON](https://en.wikipedia.org/wiki/JSON)
+- [SVG](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics)
 
 # Features
 
-Customized the rendering, choose between 4 types of view Posters, Layers or Grid, with or without edges.
+Customized the rendering views: Posters, Layers or Grid, with or without edges.
 
-
-Be sure to:
-
-* Change the title in this README
-* Edit your repository description on GitHub
+# Installation
+Requires NodeJS minimum version 14.17.0
 
 ## Security
 
@@ -44,4 +41,3 @@ See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more inform
 ## License
 
 This project is licensed under the Apache-2.0 License.
-

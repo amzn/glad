@@ -1,4 +1,4 @@
-## GLAD - *G*enerated *L*ayer *A*rchitecture *D*iagram
+## GLAD - *G*enerate *L*ayer *A*rchitecture *D*iagram
 
 Automaticaly generate **layer diagram** view of your Javascript/Typescript source code dependencies.
 

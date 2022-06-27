@@ -1,0 +1,10 @@
+.idea/**
+.vscode/**
+test/**
+.gitignore
+.npmignore
+.jshintrc
+.eslintrc.json
+glad.svg
+CONTRIBUTING.md
+CODE_OF_CONDUCT.md

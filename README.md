@@ -13,7 +13,7 @@ using ![js-standard-style](https://img.shields.io/badge/code%20style-standard-br
 
 ## Example
 
-![example](https://raw.githubusercontent.com/amzn/glad/main/glad.svg?token=GHSAT0AAAAAABWCAGDYJ6BEARQKQPS6JDDYYV2UA3A)
+![example](https://github.com/amzn/glad/blob/main/glad.svg)
 
 # Tech/Framework used
 

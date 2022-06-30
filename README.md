@@ -32,7 +32,42 @@ Built with:
 Customized the rendering views: Posters, Layers or Grid, with or without edges.
 
 # Installation
-Requires NodeJS minimum version 14.17.0
+```
+npm install -g .
+```
+
+# Execute
+```
+glad
+```
+
+# Help
+```
+glad -h
+
+Usage: glad < path > [options]  "Generates an SVG layer diagram file based on your TS & JS source files dependencies"
+
+Options:
+  -h, --help              Show help  [boolean]
+  -i, --input             File path to scan  [string]
+  -o, --output            File path to output svg  [string] [default: "./glad.svg"]
+  -e, --exclude           File glob to exclude from the analysis, eg: "**/*.test.js"  [string]
+      --view              Type of diagram to generate  [string] [choices: "poster", "layers", "grid"] [default: "poster"]
+      --align             Set the horizontal position of the nodes  [string] [choices: "left", "center", "right"] [default: "center"]
+      --edges             Type of rendering for all edges  [string] [choices: "files", "folders"] [default: "files"]
+      --lines             Type of rendering for all edges  [string] [choices: "curve", "strait", "elbow", "angle", "hide", "warnings"] [default: "curve"]
+      --lineEffect, --le  Special effect on the lines  [string] [default: "flat"]
+  -l, --layers            Display the layers background and numbers  [boolean] [default: false]
+  -d, --details           Show additional values for each folders  [boolean] [default: false]
+      --json              Output the graph to file called glad.json  [boolean] [default: false]
+      --debug             For tech support  [boolean] [default: false]
+      --listFiles         List all input files found  [boolean] [default: false]
+  -s, --silent            No output except for errors  [boolean] [default: false]
+  -v, --version           Show version number  [boolean]
+
+Examples:
+  glad . --view layers -l --edges -hide  ">>> Produce a diagram with no edges, each layers are numbered."
+```
 
 ## Security
 

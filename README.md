@@ -4,32 +4,32 @@ Automatically generate **layer diagram** view of your Javascript/Typescript sour
 
 ## Motivation
 
-Self-contained, Lightweight, and Fast.
+View and Keep your project source files layer dependencies clean. Avoid circular reference or referencing an upper layer from a lower layer.  
 
-## Code style
+Supports source files of type JS & TS, simply launch the ```glad``` and open the resulting ```glad.svg``` file.
 
-100% ESLint clean
-using ![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)
 
 ## Example
 
-![example](https://github.com/amzn/glad/blob/main/glad.svg)
+![example](glad.svg)
 
-# Tech/Framework used
+# Technologies used
+[<img src="https://img.shields.io/badge/Node.js-43853D.svg?&logo=node.js&logoColor=white">](https://nodejs.org/)
+[<img src="https://img.shields.io/badge/npm-CB3837.svg?&logo=npm&logoColor=white">](https://npmjs.org/)
+[<img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?&logo=javascript&logoColor=black">](https://en.wikipedia.org/wiki/JavaScript)
+[<img src="https://img.shields.io/badge/Json-F7DF1E.svg?logo=json&logoColor=black">](https://en.wikipedia.org/wiki/JSON)
+[<img src="https://img.shields.io/badge/TS--Morph-3178C6.svg?logo=TypeScript&logoColor=white">](https://ts-morph.com/)
+[<img src="https://img.shields.io/badge/SVG-FFB13B.svg?logo=svg&logoColor=black">](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics)
+[<img src="https://img.shields.io/badge/eslint-4B32C3.svg?logo=ESLint&logoColor=white">](https://eslint.org/)
+[<img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide">](https://standardjs.com/)
 
-Supports JS/TS projects, simply launch the app and open the resulting glad.svg file.
 
-Built with:
-
-- [NodeJS](https://nodejs.org/)
-- [Javascript](https://en.wikipedia.org/wiki/JavaScript)
-- [TS-morph](https://ts-morph.com/)
-- [JSON](https://en.wikipedia.org/wiki/JSON)
-- [SVG](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics)
 
 # Features
 
-Customized the rendering views: Posters, Layers or Grid, with or without edges.
+- Optional grouping of layers by folders.
+- Rendering views as Posters, Layers, or Grid.
+- Render with or without edges (arrow lines).
 
 # Installation
 ```
@@ -41,7 +41,7 @@ npm install -g .
 glad
 ```
 
-# Help
+# CLI Help
 ```
 glad -h
 
@@ -69,10 +69,8 @@ Examples:
   glad . --view layers -l --edges -hide  ">>> Produce a diagram with no edges, each layers are numbered."
 ```
 
-## Security
-
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
-
 ## License
 
 This project is licensed under the Apache-2.0 License.
+
+[<img src="https://img.shields.io/badge/Apache--2.0-gray.svg?logo=Apache">](https://www.apache.org/licenses/LICENSE-2.0)

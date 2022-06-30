@@ -1,4 +1,4 @@
-import { Transport } from '../models/transport.js' // eslint-disable-line no-unused-vars
+import { Transport } from '../models/transport.js'
 
 /**
  * @param {Array<Transport>} listOfTransport

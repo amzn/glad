@@ -23,8 +23,6 @@ Supports source files of type JS & TS, simply launch the ```glad``` and open the
 [<img src="https://img.shields.io/badge/eslint-4B32C3.svg?logo=ESLint&logoColor=white">](https://eslint.org/)
 [<img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide">](https://standardjs.com/)
 
-
-
 # Features
 
 - Optional grouping of layers by folders.
@@ -32,9 +30,23 @@ Supports source files of type JS & TS, simply launch the ```glad``` and open the
 - Render with or without edges (arrow lines).
 
 # Installation
+
+### Globally
 ```
 npm install -g .
 ```
+
+### DevDependencies
+```
+npm install -D @amazon/glad
+```
+
+### As  part of your build script step
+This way while coding if you introduce a circular dependencies, the build abort.
+```
+"build": "glad ."
+```
+
 
 # Execute
 ```

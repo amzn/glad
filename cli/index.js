@@ -98,7 +98,7 @@ const arg = yargs(hideBin(process.argv))
         type: 'boolean',
         default: false
     })
-    // .version(true, 'Show version number', packageJSon.version)
+// .version(true, 'Show version number', packageJSon.version)
     .alias('v', 'version')
     .wrap(null)
     .epilog('for more information visit https://github.com/amzn/generate-layer-architecture-diagram')

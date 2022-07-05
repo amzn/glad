@@ -1,20 +1,20 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true
-  },
-  "extends": [
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
     "standard",
     "plugin:jsdoc/recommended"
-  ],
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module"
-  },
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
   "plugins": [
     "jsdoc"
   ],
-  "rules": {
+    "rules": {
     "jsdoc/require-param-description": 0,
     "jsdoc/require-returns-description": 0,
     "jsdoc/require-param-type": 1,
@@ -36,5 +36,5 @@
       "error",
       "never"
     ]
-  }
+    }
 }

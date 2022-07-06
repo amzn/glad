@@ -123,20 +123,39 @@
     </g>
   </g>
   <g id='Edges'>
-    <path class="line" d="M650 130 C 660 260,45 260, 55 390" fill="none" stroke="#377E2288" filter='url(#shadow)'/>
-    <path class="line" d="M985 130 C 995 150,715 150, 725 170" fill="none" stroke="#377E2288" filter='url(#shadow)'/>
-    <path class="line" d="M332.5 165 C 342.5 185,62.5 185, 72.5 205" fill="none" stroke="#EB4132" filter='url(#shadow)'/>
-    <path class="line" d="M332.5 245 C 342.5 185,62.5 185, 72.5 125" fill="none" stroke="#EB4132" filter='url(#shadow)'/>
+    <path class="line" d="M650 130 C 660 260,45 260, 55 390" fill="none" stroke="#377E2288" filter='url(#shadow)'>
+      <title>Barn2
+⬇
+Chickens</title>
+    </path>
+    <path class="line" d="M985 130 C 995 150,715 150, 725 170" fill="none" stroke="#377E2288" filter='url(#shadow)'>
+      <title>PersonA
+⬇
+PersonB</title>
+    </path>
+    <path class="line" d="M332.5 165 C 342.5 185,62.5 185, 72.5 205" fill="none" stroke="#EB4132" filter='url(#shadow)'>
+      <title>Potato
+⬇
+Yam</title>
+    </path>
+    <path class="line" d="M332.5 245 C 342.5 185,62.5 185, 72.5 125" fill="none" stroke="#EB4132" filter='url(#shadow)'>
+      <title>Yam
+⬇
+Potato</title>
+    </path>
   </g>
   <g id='Edges_Containers'>
-    <path class="line" d="M372.5 315 C 382.5 335,305 335, 315 355" fill="none" stroke="#377E2288" filter='url(#shadow)'/>
+    <path class="line" d="M372.5 315 C 382.5 335,305 335, 315 355" fill="none" stroke="#377E2288" filter='url(#shadow)'>
+    </path>
     <g>
       <circle cx="372.5" cy="315" r="10" fill="green"/>
       <text x="372.5" y="315" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+      <title>123</title>
     </g>
     <g>
       <circle cx="315" cy="355" r="10" fill="blue"/>
       <text x="315" y="355" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+      <title>321</title>
     </g>
   </g>
   <g id='Counters_Farming'>
@@ -146,20 +165,32 @@
           <g>
             <circle cx="332.5" cy="165" r="10" fill="green"/>
             <text x="332.5" y="165" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+            <title>Potato
+⬇
+1 Farming/Land/Barn1/Yam</title>
           </g>
           <g>
             <circle cx="72.5" cy="125" r="10" fill="blue"/>
             <text x="72.5" y="125" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+            <title>1 Farming/Land/Barn1/Yam
+⬇
+Potato</title>
           </g>
         </g>
         <g id='Counters_Yam'>
           <g>
             <circle cx="332.5" cy="245" r="10" fill="green"/>
             <text x="332.5" y="245" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+            <title>Yam
+⬇
+1 Farming/Land/Barn1/Potato</title>
           </g>
           <g>
             <circle cx="72.5" cy="205" r="10" fill="blue"/>
             <text x="72.5" y="205" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+            <title>1 Farming/Land/Barn1/Potato
+⬇
+Yam</title>
           </g>
         </g>
       </g>
@@ -167,6 +198,9 @@
         <g>
           <circle cx="650" cy="130" r="10" fill="green"/>
           <text x="650" y="130" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+          <title>Barn2
+⬇
+1 Farming/Animals/Chickens</title>
         </g>
       </g>
     </g>
@@ -175,12 +209,18 @@
         <g>
           <circle cx="985" cy="130" r="10" fill="green"/>
           <text x="985" y="130" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+          <title>PersonA
+⬇
+1 Farming/People/PersonB</title>
         </g>
       </g>
       <g id='Counters_PersonB'>
         <g>
           <circle cx="725" cy="170" r="10" fill="blue"/>
           <text x="725" y="170" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+          <title>1 Farming/People/PersonA
+⬇
+PersonB</title>
         </g>
       </g>
     </g>
@@ -189,6 +229,9 @@
         <g>
           <circle cx="55" cy="390" r="10" fill="blue"/>
           <text x="55" y="390" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+          <title>1 Farming/Land/Barn2
+⬇
+Chickens</title>
         </g>
       </g>
       <g id='Counters_Cows'>

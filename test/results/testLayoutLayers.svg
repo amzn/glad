@@ -124,44 +124,68 @@
     <g>
       <circle cx="580" cy="95" r="10" fill="green"/>
       <text x="580" y="95" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+      <title>Barn2
+⬇
+1 Farming/Animals/Chickens</title>
     </g>
   </g>
   <g id='Counters_Chickens'>
     <g>
       <circle cx="320" cy="205" r="10" fill="blue"/>
       <text x="320" y="205" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+      <title>1 Farming/Land/Barn2
+⬇
+Chickens</title>
     </g>
   </g>
   <g id='Counters_PersonA'>
     <g>
       <circle cx="880" cy="95" r="10" fill="green"/>
       <text x="880" y="95" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+      <title>PersonA
+⬇
+1 Farming/People/PersonB</title>
     </g>
   </g>
   <g id='Counters_PersonB'>
     <g>
       <circle cx="620" cy="205" r="10" fill="blue"/>
       <text x="620" y="205" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+      <title>1 Farming/People/PersonA
+⬇
+PersonB</title>
     </g>
   </g>
   <g id='Counters_Potato'>
     <g>
       <circle cx="280" cy="95" r="10" fill="green"/>
       <text x="280" y="95" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+      <title>Potato
+⬇
+1 Farming/Land/Barn1/Yam</title>
     </g>
     <g>
       <circle cx="20" cy="55" r="10" fill="blue"/>
       <text x="20" y="55" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+      <title>1 Farming/Land/Barn1/Yam
+⬇
+Potato</title>
     </g>
   </g>
   <g id='Counters_Yam'>
     <g>
       <circle cx="280" cy="245" r="10" fill="green"/>
       <text x="280" y="245" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+      <title>Yam
+⬇
+1 Farming/Land/Barn1/Potato</title>
     </g>
     <g>
       <circle cx="20" cy="205" r="10" fill="blue"/>
       <text x="20" y="205" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
+      <title>1 Farming/Land/Barn1/Potato
+⬇
+Yam</title>
     </g>
   </g>
   <g id='Labels_Barn2'>

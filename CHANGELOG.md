@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 ## [1.1.0]  2022-07-05
 
     - Update packages
-    - add tooltop to Edges and Counters
+    - add tooltip to Edges and Counters
 
 ## [1.0.2]  2022-06-31
 

@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.1]  2022-07-16
+
+    - remove the NodeJS and NPM engine version enforcement, tested to work with NodeJS 14 & 16
+
 ## [1.1.0]  2022-07-05
 
     - Update packages

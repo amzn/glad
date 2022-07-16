@@ -1,4 +1,4 @@
-## GLAD - *Generate Layer Architecture Diagram*
+# GLAD - Generate Layer Architecture Diagram
 
 Automatically generate **layer diagram** view of your Javascript/Typescript source code dependencies.
 
@@ -8,12 +8,12 @@ View and Keep your project source files layer dependencies clean. Avoid circular
 
 Supports source files of type JS & TS, simply launch the ```glad``` and open the resulting ```glad.svg``` file.
 
-
 ## Example
 
 ![example](glad.svg)
 
-# Technologies used
+## Technologies used
+
 [<img src="https://img.shields.io/badge/Node.js-43853D.svg?&logo=node.js&logoColor=white">](https://nodejs.org/)
 [<img src="https://img.shields.io/badge/npm-CB3837.svg?&logo=npm&logoColor=white">](https://npmjs.org/)
 [<img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?&logo=javascript&logoColor=black">](https://en.wikipedia.org/wiki/JavaScript)
@@ -23,38 +23,43 @@ Supports source files of type JS & TS, simply launch the ```glad``` and open the
 [<img src="https://img.shields.io/badge/eslint-4B32C3.svg?logo=ESLint&logoColor=white">](https://eslint.org/)
 [<img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide">](https://standardjs.com/)
 
-# Features
+## Features
 
 - Optional grouping of layers by folders.
 - Rendering views as Posters, Layers, or Grid.
 - Render with or without edges (arrow lines).
 
-# Installation
+## Installation
 
 ### Globally
-```
+
+```bash
 npm install -g .
 ```
 
 ### DevDependencies
-```
+
+```bash
 npm install -D @amazon/glad
 ```
 
 ### As  part of your build script step
+
 This way while coding if you introduce a circular dependencies, the build abort.
-```
+
+```JSon
 "build": "glad ."
 ```
 
+## Execute
 
-# Execute
-```
+```bash
 glad
 ```
 
-# CLI Help
-```
+## CLI Help
+
+```text
 glad -h
 
 Usage: glad < path > [options]  "Generates an SVG layer diagram file based on your TS & JS source files dependencies"

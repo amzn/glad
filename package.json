@@ -2,7 +2,7 @@
   "name": "@amazon/glad",
   "version": "1.1.1",
   "description": "Generate a Layer Diagram view of your source layers",
-  "main": "bin/index.js",
+  "main": "cli/index.js",
   "author": "jp@vteam.com",
   "license": "Apache-2.0",
   "bin": {

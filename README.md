@@ -45,10 +45,14 @@ npm install -D @amazon/glad
 
 ### As  part of your build script step
 
-This way while coding if you introduce a circular dependencies, the build abort.
+By adding "glad" to your build step, you will be alerted if you introduce a circular dependencies.
 
 ```JSon
-"build": "glad ."
+{
+  "scripts": {
+    "build": "glad ."
+  }
+}
 ```
 
 ## Execute

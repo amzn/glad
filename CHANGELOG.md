@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.2]  2022-08-04
+
+    - package.json fix "main: cli/index.js"
+    - update package eslint 8.21.0 and eslint-plugin-jsdoc 39.3.4
+    - eslint config set to node:true and eslint:recommended, tab-space from 4 to 2
+
 ## [1.1.1]  2022-07-16
 
     - remove the NodeJS and NPM engine version enforcement, tested to work with NodeJS 14 & 16

@@ -1,6 +1,6 @@
 {
   "name": "@amazon/glad",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Generate a Layer Diagram view of your source layers",
   "main": "cli/index.js",
   "author": "jp@vteam.com",
@@ -38,9 +38,8 @@
   },
   "scripts": {
     "test": "mocha",
-    "lint": "eslint .",
-    "lintfix": "eslint . --fix",
-    "release": "npm install && depcheck . && eslint . && mocha && npm run start",
-    "start": "node cli/index.js -sl -e **/demoApp*"
+    "lint": "eslint . --fix",
+    "release": "npm install && depcheck . && eslint . --fix && mocha && npm run start",
+    "start": "node cli/index.js -sld -e **/demoApp/**"
   }
 }

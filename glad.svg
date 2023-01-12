@@ -846,13 +846,16 @@ strings.js</title>
   </g>
   <g id='Labels_glad'>
     <text class="folderName" x="10" y="10">glad</text>
+    <text x="10" y="1290" font-size="75%">6 folders, 18 files</text>
     <g id='Labels_lib'>
       <text class="folderName" x="27.5" y="195">lib</text>
+      <text x="27.5" y="1255" font-size="75%">3 folders, 16 files, 8 incoming, path: .../glad/</text>
       <g id='Labels_glad.js'>
         <text class="nodeName" x="502.5" y="260" font-size="120%">glad.js</text>
       </g>
       <g id='Labels_render'>
         <text class="folderName" x="45" y="310">render</text>
+        <text x="45" y="520" font-size="75%">4 files, 6 incoming, 20 outgoing, path: .../glad/lib/</text>
         <g id='Labels_renderAsPoster.js'>
           <text class="nodeName" x="202.5" y="375" font-size="120%">renderAsPoster.js</text>
         </g>
@@ -868,6 +871,7 @@ strings.js</title>
       </g>
       <g id='Labels_models'>
         <text class="folderName" x="195" y="540">models</text>
+        <text x="195" y="990" font-size="75%">9 files, 25 incoming, 1 outgoing, path: .../glad/lib/</text>
         <g id='Labels_graph.js'>
           <text class="nodeName" x="352.5" y="605" font-size="120%">graph.js</text>
         </g>
@@ -898,6 +902,7 @@ strings.js</title>
       </g>
       <g id='Labels_util'>
         <text class="folderName" x="345" y="1010">util</text>
+        <text x="345" y="1220" font-size="75%">2 files, 4 incoming, path: .../glad/lib/</text>
         <g id='Labels_svg.js'>
           <text class="nodeName" x="502.5" y="1075" font-size="120%">svg.js</text>
         </g>
@@ -908,12 +913,14 @@ strings.js</title>
     </g>
     <g id='Labels_test'>
       <text class="folderName" x="177.5" y="45">test</text>
+      <text x="177.5" y="175" font-size="75%">1 file, 6 outgoing, path: .../glad/</text>
       <g id='Labels_test.js'>
         <text class="nodeName" x="335" y="110" font-size="120%">test.js</text>
       </g>
     </g>
     <g id='Labels_cli'>
       <text class="folderName" x="512.5" y="45">cli</text>
+      <text x="512.5" y="175" font-size="75%">1 file, 2 outgoing, path: .../glad/</text>
       <g id='Labels_index.js'>
         <text class="nodeName" x="670" y="110" font-size="120%">index.js</text>
       </g>

@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.4]  2023-01-12
+
+    - Exclude "node_modules" from import targets
+
+## [1.1.3]  2023-01-11
+
+    - Fix for running on Windows
+
 ## [1.1.2]  2022-08-04
 
     - package.json fix "main: cli/index.js"

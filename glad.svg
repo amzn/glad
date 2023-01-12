@@ -89,71 +89,54 @@
   <g id='Layers_Rects'>
     <g id='Layer:0 of glad'>
       <rect x="17.5" y="35" width="970" height="150" rx="2" ry="2" class="layerRectangle" id='glad 0'/>
-      <text x="977.5" y="45" class='layerText' dominant-baseline="hanging" text-anchor="end" >1 glad</text>
     </g>
     <g id='Layer:0 of test'>
       <rect x="185" y="70" width="300" height="80" rx="2" ry="2" class="layerRectangle" id='test 0'/>
-      <text x="475" y="80" class='layerText' dominant-baseline="hanging" text-anchor="end" >1 test</text>
     </g>
     <g id='Layer:0 of cli'>
       <rect x="520" y="70" width="300" height="80" rx="2" ry="2" class="layerRectangle" id='cli 0'/>
-      <text x="810" y="80" class='layerText' dominant-baseline="hanging" text-anchor="end" >1 cli</text>
     </g>
     <g id='Layer:1 of glad'>
       <rect x="17.5" y="185" width="970" height="1080" rx="2" ry="2" class="layerRectangle" id='glad 1'/>
-      <text x="977.5" y="195" class='layerText' dominant-baseline="hanging" text-anchor="end" >2 glad</text>
     </g>
     <g id='Layer:0 of lib'>
       <rect x="35" y="220" width="935" height="80" rx="2" ry="2" class="layerRectangle" id='lib 0'/>
-      <text x="960" y="230" class='layerText' dominant-baseline="hanging" text-anchor="end" >1 lib</text>
     </g>
     <g id='Layer:1 of lib'>
       <rect x="35" y="300" width="935" height="230" rx="2" ry="2" class="layerRectangle" id='lib 1'/>
-      <text x="960" y="310" class='layerText' dominant-baseline="hanging" text-anchor="end" >2 lib</text>
     </g>
     <g id='Layer:0 of render'>
       <rect x="52.5" y="335" width="900" height="80" rx="2" ry="2" class="layerRectangle" id='render 0'/>
-      <text x="942.5" y="345" class='layerText' dominant-baseline="hanging" text-anchor="end" >1 render</text>
     </g>
     <g id='Layer:1 of render'>
       <rect x="52.5" y="415" width="900" height="80" rx="2" ry="2" class="layerRectangle" id='render 1'/>
-      <text x="942.5" y="425" class='layerText' dominant-baseline="hanging" text-anchor="end" >2 render</text>
     </g>
     <g id='Layer:2 of lib'>
       <rect x="35" y="530" width="935" height="470" rx="2" ry="2" class="layerRectangle" id='lib 2'/>
-      <text x="960" y="540" class='layerText' dominant-baseline="hanging" text-anchor="end" >3 lib</text>
     </g>
     <g id='Layer:0 of models'>
       <rect x="202.5" y="565" width="600" height="80" rx="2" ry="2" class="layerRectangle" id='models 0'/>
-      <text x="792.5" y="575" class='layerText' dominant-baseline="hanging" text-anchor="end" >1 models</text>
     </g>
     <g id='Layer:1 of models'>
       <rect x="202.5" y="645" width="600" height="80" rx="2" ry="2" class="layerRectangle" id='models 1'/>
-      <text x="792.5" y="655" class='layerText' dominant-baseline="hanging" text-anchor="end" >2 models</text>
     </g>
     <g id='Layer:2 of models'>
       <rect x="202.5" y="725" width="600" height="80" rx="2" ry="2" class="layerRectangle" id='models 2'/>
-      <text x="792.5" y="735" class='layerText' dominant-baseline="hanging" text-anchor="end" >3 models</text>
     </g>
     <g id='Layer:3 of models'>
       <rect x="202.5" y="805" width="600" height="80" rx="2" ry="2" class="layerRectangle" id='models 3'/>
-      <text x="792.5" y="815" class='layerText' dominant-baseline="hanging" text-anchor="end" >4 models</text>
     </g>
     <g id='Layer:4 of models'>
       <rect x="202.5" y="885" width="600" height="80" rx="2" ry="2" class="layerRectangle" id='models 4'/>
-      <text x="792.5" y="895" class='layerText' dominant-baseline="hanging" text-anchor="end" >5 models</text>
     </g>
     <g id='Layer:3 of lib'>
       <rect x="35" y="1000" width="935" height="230" rx="2" ry="2" class="layerRectangle" id='lib 3'/>
-      <text x="960" y="1010" class='layerText' dominant-baseline="hanging" text-anchor="end" >4 lib</text>
     </g>
     <g id='Layer:0 of util'>
       <rect x="352.5" y="1035" width="300" height="80" rx="2" ry="2" class="layerRectangle" id='util 0'/>
-      <text x="642.5" y="1045" class='layerText' dominant-baseline="hanging" text-anchor="end" >1 util</text>
     </g>
     <g id='Layer:1 of util'>
       <rect x="352.5" y="1115" width="300" height="80" rx="2" ry="2" class="layerRectangle" id='util 1'/>
-      <text x="642.5" y="1125" class='layerText' dominant-baseline="hanging" text-anchor="end" >2 util</text>
     </g>
   </g>
   <g id='Node_glad'>

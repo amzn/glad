@@ -22,24 +22,24 @@
     "validation"
   ],
   "dependencies": {
-    "chalk": "^5.0.1",
-    "ts-morph": "^15.1.0",
-    "yargs": "^17.5.1"
+    "chalk": "^5.2.0",
+    "ts-morph": "^17.0.1",
+    "yargs": "^17.6.2"
   },
   "devDependencies": {
     "depcheck": "^1.4.2",
-    "eslint": "^8.21.0",
+    "eslint": "^8.31.0",
     "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsdoc": "^39.3.4",
-    "eslint-plugin-n": "^15.2.4",
-    "eslint-plugin-promise": "^6.0.0",
-    "mocha": "^10.0.0"
+    "eslint-plugin-import": "^2.27.4",
+    "eslint-plugin-jsdoc": "^39.6.4",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "mocha": "^10.2.0"
   },
   "scripts": {
     "test": "mocha",
     "lint": "eslint . --fix",
     "release": "npm install && depcheck . && eslint . --fix && mocha && npm run start",
-    "start": "node cli/index.js -sld -e **/demoApp/**"
+    "start": "node cli/index.js -sld -e '**/demoApp/**' ."
   }
 }

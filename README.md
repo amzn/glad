@@ -6,7 +6,9 @@ Automatically generate **layer diagram** view of your Javascript/Typescript sour
 
 View and Keep your project source files layer dependencies clean. Avoid circular reference or referencing an upper layer from a lower layer.  
 
-Supports source files of type JS & TS, simply launch the ```glad``` and open the resulting ```glad.svg``` file.
+### Project type supported 
+* NodeJS - source files of type **JS & TS**, simply launch the ```glad``` and open the resulting ```glad.svg``` file.
+* **NEW** - Now supports **Flutter/Dart** package dependencies
 
 ## Example
 

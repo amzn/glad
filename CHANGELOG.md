@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0]  2023-08-07
+
+    - Support for Flutter/Dart projects
+
 ## [1.1.5]  2023-08-07
 
     - Update packages

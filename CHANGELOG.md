@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.5]  2023-08-07
+
+    - Update packages
+
 ## [1.1.4]  2023-01-12
 
     - Exclude "node_modules" from import targets

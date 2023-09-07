@@ -1,6 +1,6 @@
 # GLAD - Generate Layer Architecture Diagram
 
-Automatically generate **layer diagram** view of your Javascript/Typescript source code dependencies.
+Automatically generate **layer diagram** view of your Javascript/Typescript/Dart source code dependencies.
 
 ## Motivation
 

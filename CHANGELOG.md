@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.1]  2023-11-18
+
+    - Show Dart module versions
+
 ## [1.2.0]  2023-08-07
 
     - Support for Flutter/Dart projects

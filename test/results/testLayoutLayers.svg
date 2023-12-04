@@ -1,5 +1,5 @@
 <?xml version="1.0" standalone="no"?>
-<svg width="900" height="300" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif" style="background-color:white">
+<svg width="900" height="300" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
   <style>
     .layerRectangle {
       stroke: black;
@@ -12,11 +12,13 @@
       filter: url(#outlineWhite);
     }
     .nodeFolder {
-      fill: #aaaaaa33;
+      fill: #aaaaaa;
+      opacity: 0.3;
       stroke: whitesmoke;
     }
     .nodeFile {
-      fill: #ffffffee;
+      fill: #ffffff;
+      opacity: 0.9;
       stroke: gray;
     }
     .folderName {
@@ -44,12 +46,11 @@
       stroke-width: 6;
       opacity: 1;
     }
-
-    </style>
+</style>
   <defs id='idSvgDef'>
     <linearGradient id="layers" gradientTransform="rotate(90)">
-      <stop offset="0%"  stop-color="rgba(105, 24, 114, 0.10)"/>
-      <stop offset="100%" stop-color="rgba(105, 24, 114, 0.30)" />
+      <stop offset="0%" stop-color="#691872" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#691872" stop-opacity="0.3" />
     </linearGradient>
     <filter id="shadow">
       <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
@@ -63,7 +64,7 @@
     </filter>
     <filter id="outlineWhite">
       <feMorphology in="SourceAlpha" result="DILATED" operator="dilate" radius="2"/>
-      <feFlood flood-color="#ffffffaa" flood-opacity="1" result="WHITE"/>
+      <feFlood flood-color="white" flood-opacity="0.5" result="WHITE"/>
       <feComposite in="WHITE" in2="DILATED" operator="in" result="OUTLINE"/>
       <feMerge>
         <feMergeNode in="OUTLINE" />
@@ -72,7 +73,7 @@
     </filter>
     <filter id="outlineBlack">
       <feMorphology in="SourceAlpha" result="DILATED" operator="dilate" radius="2"/>
-      <feFlood flood-color="#000000aa" flood-opacity="1" result="BLACK"/>
+      <feFlood flood-color="black" flood-opacity="0.5" result="BLACK"/>
       <feComposite in="BLACK" in2="DILATED" operator="in" result="OUTLINE"/>
       <feMerge>
         <feMergeNode in="OUTLINE"/>
@@ -80,12 +81,14 @@
       </feMerge>
     </filter>
     <marker id='lineEnd' viewBox= '0 -5 30 10' refX='12' orient='auto'>
-      <path d='M0,-16L32,0L0,16' fill='#3058FFaa'/>
+      <path d='M0,-16L32,0L0,16' fill='#3058FF' opacity="0.67"/>
     </marker>
     <marker id='lineStart' viewBox= '0 -4 8 8' refX='4' orient='auto'>
-      <circle cx='4' r='4' fill='#377E22aa'/>
+      <circle cx='4' r='4' fill='#377E22'/>
     </marker>
   </defs>
+  <rect width="100%" height="100%" fill="white"/>
+  <rect width="100%" height="100%" fill="white"/>
   <g id='Layers'>
     <g id='Layer:0 of '>
       <rect x="0" y="0" width="900" height="150" rx="2" ry="2" class="layerRectangle" id=' 0'/>
@@ -115,8 +118,8 @@
     <rect x="4" y="189" width="292" height="72" rx="8" ry="8" class="nodeFile"/>
   </g>
   <g id='Edges'>
-    <line class="line" x1="580" y1="95" x2="320" y2="205" stroke="#377E2288" filter='url(#outlineBlack)'/>
-    <line class="line" x1="880" y1="95" x2="620" y2="205" stroke="#377E2288" filter='url(#outlineBlack)'/>
+    <line class="line" x1="580" y1="95" x2="320" y2="205" stroke="#377E22" filter='url(#outlineBlack)'/>
+    <line class="line" x1="880" y1="95" x2="620" y2="205" stroke="#377E22" filter='url(#outlineBlack)'/>
     <line class="line" x1="280" y1="95" x2="20" y2="205" stroke="#EB4132" filter='url(#outlineBlack)'/>
     <line class="line" x1="280" y1="245" x2="20" y2="55" stroke="#EB4132" filter='url(#outlineBlack)'/>
   </g>

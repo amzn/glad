@@ -1,5 +1,5 @@
 <?xml version="1.0" standalone="no"?>
-<svg width="1005" height="1300" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif" style="background-color:white">
+<svg width="1005" height="1300" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
   <style>
     .layerRectangle {
       stroke: black;
@@ -12,11 +12,13 @@
       filter: url(#outlineWhite);
     }
     .nodeFolder {
-      fill: #aaaaaa33;
+      fill: #aaaaaa;
+      opacity: 0.3;
       stroke: whitesmoke;
     }
     .nodeFile {
-      fill: #ffffffee;
+      fill: #ffffff;
+      opacity: 0.9;
       stroke: gray;
     }
     .folderName {
@@ -44,12 +46,11 @@
       stroke-width: 6;
       opacity: 1;
     }
-
-    </style>
+</style>
   <defs id='idSvgDef'>
     <linearGradient id="layers" gradientTransform="rotate(90)">
-      <stop offset="0%"  stop-color="rgba(105, 24, 114, 0.10)"/>
-      <stop offset="100%" stop-color="rgba(105, 24, 114, 0.30)" />
+      <stop offset="0%" stop-color="#691872" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#691872" stop-opacity="0.3" />
     </linearGradient>
     <filter id="shadow">
       <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
@@ -63,7 +64,7 @@
     </filter>
     <filter id="outlineWhite">
       <feMorphology in="SourceAlpha" result="DILATED" operator="dilate" radius="2"/>
-      <feFlood flood-color="#ffffffaa" flood-opacity="1" result="WHITE"/>
+      <feFlood flood-color="white" flood-opacity="0.5" result="WHITE"/>
       <feComposite in="WHITE" in2="DILATED" operator="in" result="OUTLINE"/>
       <feMerge>
         <feMergeNode in="OUTLINE" />
@@ -72,7 +73,7 @@
     </filter>
     <filter id="outlineBlack">
       <feMorphology in="SourceAlpha" result="DILATED" operator="dilate" radius="2"/>
-      <feFlood flood-color="#000000aa" flood-opacity="1" result="BLACK"/>
+      <feFlood flood-color="black" flood-opacity="0.5" result="BLACK"/>
       <feComposite in="BLACK" in2="DILATED" operator="in" result="OUTLINE"/>
       <feMerge>
         <feMergeNode in="OUTLINE"/>
@@ -80,12 +81,13 @@
       </feMerge>
     </filter>
     <marker id='lineEnd' viewBox= '0 -5 30 10' refX='12' orient='auto'>
-      <path d='M0,-16L32,0L0,16' fill='#3058FFaa'/>
+      <path d='M0,-16L32,0L0,16' fill='#3058FF' opacity="0.67"/>
     </marker>
     <marker id='lineStart' viewBox= '0 -4 8 8' refX='4' orient='auto'>
-      <circle cx='4' r='4' fill='#377E22aa'/>
+      <circle cx='4' r='4' fill='#377E22'/>
     </marker>
   </defs>
+  <rect width="100%" height="100%" fill="white"/>
   <g id='Layers_Rects'>
     <g id='Layer:0 of glad'>
       <rect x="17.5" y="35" width="970" height="150" rx="2" ry="2" class="layerRectangle" id='glad 0'/>
@@ -215,282 +217,282 @@
     </g>
   </g>
   <g id='Edges'>
-    <path class="line" d="M632.5 865 C 642.5 885,212.5 885, 222.5 905" fill="none" stroke="#377E2288">
+    <path class="line" d="M632.5 865 C 642.5 885,212.5 885, 222.5 905" fill="none" stroke="#377E22">
       <title>container.js
 ⬇
 constants.js</title>
     </path>
-    <path class="line" d="M632.5 865 C 642.5 885,512.5 885, 522.5 905" fill="none" stroke="#377E2288">
+    <path class="line" d="M632.5 865 C 642.5 885,512.5 885, 522.5 905" fill="none" stroke="#377E22">
       <title>container.js
 ⬇
 rectangle.js</title>
     </path>
-    <path class="line" d="M782.5 785 C 792.5 845,212.5 845, 222.5 905" fill="none" stroke="#377E2288">
+    <path class="line" d="M782.5 785 C 792.5 845,212.5 845, 222.5 905" fill="none" stroke="#377E22">
       <title>containers.js
 ⬇
 constants.js</title>
     </path>
-    <path class="line" d="M782.5 785 C 792.5 805,362.5 805, 372.5 825" fill="none" stroke="#377E2288">
+    <path class="line" d="M782.5 785 C 792.5 805,362.5 805, 372.5 825" fill="none" stroke="#377E22">
       <title>containers.js
 ⬇
 container.js</title>
     </path>
-    <path class="line" d="M482.5 785 C 492.5 805,362.5 805, 372.5 825" fill="none" stroke="#377E2288">
+    <path class="line" d="M482.5 785 C 492.5 805,362.5 805, 372.5 825" fill="none" stroke="#377E22">
       <title>edge.js
 ⬇
 container.js</title>
     </path>
-    <path class="line" d="M782.5 705 C 792.5 765,362.5 765, 372.5 825" fill="none" stroke="#377E2288">
+    <path class="line" d="M782.5 705 C 792.5 765,362.5 765, 372.5 825" fill="none" stroke="#377E22">
       <title>edges.js
 ⬇
 container.js</title>
     </path>
-    <path class="line" d="M782.5 705 C 792.5 725,212.5 725, 222.5 745" fill="none" stroke="#377E2288">
+    <path class="line" d="M782.5 705 C 792.5 725,212.5 725, 222.5 745" fill="none" stroke="#377E22">
       <title>edges.js
 ⬇
 edge.js</title>
     </path>
-    <path class="line" d="M632.5 280 C 652.5 592,202.5 593, 222.5 905" fill="none" stroke="#377E2288">
+    <path class="line" d="M632.5 280 C 652.5 592,202.5 593, 222.5 905" fill="none" stroke="#377E22">
       <title>glad.js
 ⬇
 constants.js</title>
     </path>
-    <path class="line" d="M632.5 280 C 650.5 552,354.5 553, 372.5 825" fill="none" stroke="#377E2288">
+    <path class="line" d="M632.5 280 C 650.5 552,354.5 553, 372.5 825" fill="none" stroke="#377E22">
       <title>glad.js
 ⬇
 container.js</title>
     </path>
-    <path class="line" d="M632.5 280 C 642.5 432,212.5 433, 222.5 585" fill="none" stroke="#377E2288">
+    <path class="line" d="M632.5 280 C 642.5 432,212.5 433, 222.5 585" fill="none" stroke="#377E22">
       <title>glad.js
 ⬇
 graph.js</title>
     </path>
-    <path class="line" d="M632.5 280 C 642.5 317,362.5 318, 372.5 355" fill="none" stroke="#377E2288">
+    <path class="line" d="M632.5 280 C 642.5 317,362.5 318, 372.5 355" fill="none" stroke="#377E22">
       <title>glad.js
 ⬇
 renderAsGrid.js</title>
     </path>
-    <path class="line" d="M632.5 280 C 642.5 317,662.5 318, 672.5 355" fill="none" stroke="#377E2288">
+    <path class="line" d="M632.5 280 C 642.5 317,662.5 318, 672.5 355" fill="none" stroke="#377E22">
       <title>glad.js
 ⬇
 renderAsLayers.js</title>
     </path>
-    <path class="line" d="M632.5 280 C 642.5 317,62.5 318, 72.5 355" fill="none" stroke="#377E2288">
+    <path class="line" d="M632.5 280 C 642.5 317,62.5 318, 72.5 355" fill="none" stroke="#377E22">
       <title>glad.js
 ⬇
 renderAsPoster.js</title>
     </path>
-    <path class="line" d="M632.5 280 C 660.5 707,344.5 708, 372.5 1135" fill="none" stroke="#377E2288">
+    <path class="line" d="M632.5 280 C 660.5 707,344.5 708, 372.5 1135" fill="none" stroke="#377E22">
       <title>glad.js
 ⬇
 strings.js</title>
     </path>
-    <path class="line" d="M482.5 625 C 492.5 725,362.5 725, 372.5 825" fill="none" stroke="#377E2288">
+    <path class="line" d="M482.5 625 C 492.5 725,362.5 725, 372.5 825" fill="none" stroke="#377E22">
       <title>graph.js
 ⬇
 container.js</title>
     </path>
-    <path class="line" d="M482.5 625 C 492.5 685,212.5 685, 222.5 745" fill="none" stroke="#377E2288">
+    <path class="line" d="M482.5 625 C 492.5 685,212.5 685, 222.5 745" fill="none" stroke="#377E22">
       <title>graph.js
 ⬇
 edge.js</title>
     </path>
-    <path class="line" d="M482.5 625 C 492.5 645,512.5 645, 522.5 665" fill="none" stroke="#377E2288">
+    <path class="line" d="M482.5 625 C 492.5 645,512.5 645, 522.5 665" fill="none" stroke="#377E22">
       <title>graph.js
 ⬇
 edges.js</title>
     </path>
-    <path class="line" d="M482.5 625 C 499.5 880,355.5 880, 372.5 1135" fill="none" stroke="#377E2288">
+    <path class="line" d="M482.5 625 C 499.5 880,355.5 880, 372.5 1135" fill="none" stroke="#377E22">
       <title>graph.js
 ⬇
 strings.js</title>
     </path>
-    <path class="line" d="M800 130 C 825 517,197.5 518, 222.5 905" fill="none" stroke="#377E2288">
+    <path class="line" d="M800 130 C 825 517,197.5 518, 222.5 905" fill="none" stroke="#377E22">
       <title>index.js
 ⬇
 constants.js</title>
     </path>
-    <path class="line" d="M800 130 C 810 185,362.5 185, 372.5 240" fill="none" stroke="#377E2288">
+    <path class="line" d="M800 130 C 810 185,362.5 185, 372.5 240" fill="none" stroke="#377E22">
       <title>index.js
 ⬇
 glad.js</title>
     </path>
-    <path class="line" d="M482.5 705 C 492.5 805,212.5 805, 222.5 905" fill="none" stroke="#377E2288">
+    <path class="line" d="M482.5 705 C 492.5 805,212.5 805, 222.5 905" fill="none" stroke="#377E22">
       <title>layer.js
 ⬇
 constants.js</title>
     </path>
-    <path class="line" d="M482.5 705 C 492.5 725,512.5 725, 522.5 745" fill="none" stroke="#377E2288">
+    <path class="line" d="M482.5 705 C 492.5 725,512.5 725, 522.5 745" fill="none" stroke="#377E22">
       <title>layer.js
 ⬇
 containers.js</title>
     </path>
-    <path class="line" d="M482.5 705 C 492.5 805,512.5 805, 522.5 905" fill="none" stroke="#377E2288">
+    <path class="line" d="M482.5 705 C 492.5 805,512.5 805, 522.5 905" fill="none" stroke="#377E22">
       <title>layer.js
 ⬇
 rectangle.js</title>
     </path>
-    <path class="line" d="M782.5 625 C 792.5 765,212.5 765, 222.5 905" fill="none" stroke="#377E2288">
+    <path class="line" d="M782.5 625 C 792.5 765,212.5 765, 222.5 905" fill="none" stroke="#377E22">
       <title>layers.js
 ⬇
 constants.js</title>
     </path>
-    <path class="line" d="M782.5 625 C 792.5 725,362.5 725, 372.5 825" fill="none" stroke="#377E2288">
+    <path class="line" d="M782.5 625 C 792.5 725,362.5 725, 372.5 825" fill="none" stroke="#377E22">
       <title>layers.js
 ⬇
 container.js</title>
     </path>
-    <path class="line" d="M782.5 625 C 792.5 645,212.5 645, 222.5 665" fill="none" stroke="#377E2288">
+    <path class="line" d="M782.5 625 C 792.5 645,212.5 645, 222.5 665" fill="none" stroke="#377E22">
       <title>layers.js
 ⬇
 layer.js</title>
     </path>
-    <path class="line" d="M632.5 395 C 649.5 650,205.5 650, 222.5 905" fill="none" stroke="#377E2288">
+    <path class="line" d="M632.5 395 C 649.5 650,205.5 650, 222.5 905" fill="none" stroke="#377E22">
       <title>renderAsGrid.js
 ⬇
 constants.js</title>
     </path>
-    <path class="line" d="M632.5 395 C 646.5 610,358.5 610, 372.5 825" fill="none" stroke="#377E2288">
+    <path class="line" d="M632.5 395 C 646.5 610,358.5 610, 372.5 825" fill="none" stroke="#377E22">
       <title>renderAsGrid.js
 ⬇
 container.js</title>
     </path>
-    <path class="line" d="M632.5 395 C 642.5 490,212.5 490, 222.5 585" fill="none" stroke="#377E2288">
+    <path class="line" d="M632.5 395 C 642.5 490,212.5 490, 222.5 585" fill="none" stroke="#377E22">
       <title>renderAsGrid.js
 ⬇
 graph.js</title>
     </path>
-    <path class="line" d="M632.5 395 C 642.5 415,362.5 415, 372.5 435" fill="none" stroke="#377E2288">
+    <path class="line" d="M632.5 395 C 642.5 415,362.5 415, 372.5 435" fill="none" stroke="#377E22">
       <title>renderAsGrid.js
 ⬇
 renderBase.js</title>
     </path>
-    <path class="line" d="M932.5 395 C 949.5 650,205.5 650, 222.5 905" fill="none" stroke="#377E2288">
+    <path class="line" d="M932.5 395 C 949.5 650,205.5 650, 222.5 905" fill="none" stroke="#377E22">
       <title>renderAsLayers.js
 ⬇
 constants.js</title>
     </path>
-    <path class="line" d="M932.5 395 C 942.5 490,212.5 490, 222.5 585" fill="none" stroke="#377E2288">
+    <path class="line" d="M932.5 395 C 942.5 490,212.5 490, 222.5 585" fill="none" stroke="#377E22">
       <title>renderAsLayers.js
 ⬇
 graph.js</title>
     </path>
-    <path class="line" d="M932.5 395 C 942.5 490,512.5 490, 522.5 585" fill="none" stroke="#377E2288">
+    <path class="line" d="M932.5 395 C 942.5 490,512.5 490, 522.5 585" fill="none" stroke="#377E22">
       <title>renderAsLayers.js
 ⬇
 layers.js</title>
     </path>
-    <path class="line" d="M932.5 395 C 942.5 415,362.5 415, 372.5 435" fill="none" stroke="#377E2288">
+    <path class="line" d="M932.5 395 C 942.5 415,362.5 415, 372.5 435" fill="none" stroke="#377E22">
       <title>renderAsLayers.js
 ⬇
 renderBase.js</title>
     </path>
-    <path class="line" d="M332.5 395 C 349.5 650,205.5 650, 222.5 905" fill="none" stroke="#377E2288">
+    <path class="line" d="M332.5 395 C 349.5 650,205.5 650, 222.5 905" fill="none" stroke="#377E22">
       <title>renderAsPoster.js
 ⬇
 constants.js</title>
     </path>
-    <path class="line" d="M332.5 395 C 346.5 610,358.5 610, 372.5 825" fill="none" stroke="#377E2288">
+    <path class="line" d="M332.5 395 C 346.5 610,358.5 610, 372.5 825" fill="none" stroke="#377E22">
       <title>renderAsPoster.js
 ⬇
 container.js</title>
     </path>
-    <path class="line" d="M332.5 395 C 342.5 490,212.5 490, 222.5 585" fill="none" stroke="#377E2288">
+    <path class="line" d="M332.5 395 C 342.5 490,212.5 490, 222.5 585" fill="none" stroke="#377E22">
       <title>renderAsPoster.js
 ⬇
 graph.js</title>
     </path>
-    <path class="line" d="M332.5 395 C 342.5 490,512.5 490, 522.5 585" fill="none" stroke="#377E2288">
+    <path class="line" d="M332.5 395 C 342.5 490,512.5 490, 522.5 585" fill="none" stroke="#377E22">
       <title>renderAsPoster.js
 ⬇
 layers.js</title>
     </path>
-    <path class="line" d="M332.5 395 C 342.5 415,362.5 415, 372.5 435" fill="none" stroke="#377E2288">
+    <path class="line" d="M332.5 395 C 342.5 415,362.5 415, 372.5 435" fill="none" stroke="#377E22">
       <title>renderAsPoster.js
 ⬇
 renderBase.js</title>
     </path>
-    <path class="line" d="M632.5 475 C 646.5 690,208.5 690, 222.5 905" fill="none" stroke="#377E2288">
+    <path class="line" d="M632.5 475 C 646.5 690,208.5 690, 222.5 905" fill="none" stroke="#377E22">
       <title>renderBase.js
 ⬇
 constants.js</title>
     </path>
-    <path class="line" d="M632.5 475 C 643.5 650,361.5 650, 372.5 825" fill="none" stroke="#377E2288">
+    <path class="line" d="M632.5 475 C 643.5 650,361.5 650, 372.5 825" fill="none" stroke="#377E22">
       <title>renderBase.js
 ⬇
 container.js</title>
     </path>
-    <path class="line" d="M632.5 475 C 642.5 610,212.5 610, 222.5 745" fill="none" stroke="#377E2288">
+    <path class="line" d="M632.5 475 C 642.5 610,212.5 610, 222.5 745" fill="none" stroke="#377E22">
       <title>renderBase.js
 ⬇
 edge.js</title>
     </path>
-    <path class="line" d="M632.5 475 C 642.5 570,512.5 570, 522.5 665" fill="none" stroke="#377E2288">
+    <path class="line" d="M632.5 475 C 642.5 570,512.5 570, 522.5 665" fill="none" stroke="#377E22">
       <title>renderBase.js
 ⬇
 edges.js</title>
     </path>
-    <path class="line" d="M632.5 475 C 642.5 530,212.5 530, 222.5 585" fill="none" stroke="#377E2288">
+    <path class="line" d="M632.5 475 C 642.5 530,212.5 530, 222.5 585" fill="none" stroke="#377E22">
       <title>renderBase.js
 ⬇
 graph.js</title>
     </path>
-    <path class="line" d="M632.5 475 C 642.5 570,212.5 570, 222.5 665" fill="none" stroke="#377E2288">
+    <path class="line" d="M632.5 475 C 642.5 570,212.5 570, 222.5 665" fill="none" stroke="#377E22">
       <title>renderBase.js
 ⬇
 layer.js</title>
     </path>
-    <path class="line" d="M632.5 475 C 642.5 530,512.5 530, 522.5 585" fill="none" stroke="#377E2288">
+    <path class="line" d="M632.5 475 C 642.5 530,512.5 530, 522.5 585" fill="none" stroke="#377E22">
       <title>renderBase.js
 ⬇
 layers.js</title>
     </path>
-    <path class="line" d="M632.5 475 C 646.5 690,508.5 690, 522.5 905" fill="none" stroke="#377E2288">
+    <path class="line" d="M632.5 475 C 646.5 690,508.5 690, 522.5 905" fill="none" stroke="#377E22">
       <title>renderBase.js
 ⬇
 rectangle.js</title>
     </path>
-    <path class="line" d="M632.5 475 C 654.5 805,350.5 805, 372.5 1135" fill="none" stroke="#377E2288">
+    <path class="line" d="M632.5 475 C 654.5 805,350.5 805, 372.5 1135" fill="none" stroke="#377E22">
       <title>renderBase.js
 ⬇
 strings.js</title>
     </path>
-    <path class="line" d="M632.5 475 C 651.5 765,353.5 765, 372.5 1055" fill="none" stroke="#377E2288">
+    <path class="line" d="M632.5 475 C 651.5 765,353.5 765, 372.5 1055" fill="none" stroke="#377E22">
       <title>renderBase.js
 ⬇
 svg.js</title>
     </path>
-    <path class="line" d="M632.5 1095 C 642.5 1115,362.5 1115, 372.5 1135" fill="none" stroke="#377E2288">
+    <path class="line" d="M632.5 1095 C 642.5 1115,362.5 1115, 372.5 1135" fill="none" stroke="#377E22">
       <title>svg.js
 ⬇
 strings.js</title>
     </path>
-    <path class="line" d="M465 130 C 490 517,197.5 518, 222.5 905" fill="none" stroke="#377E2288">
+    <path class="line" d="M465 130 C 490 517,197.5 518, 222.5 905" fill="none" stroke="#377E22">
       <title>test.js
 ⬇
 constants.js</title>
     </path>
-    <path class="line" d="M465 130 C 488 477,349.5 478, 372.5 825" fill="none" stroke="#377E2288">
+    <path class="line" d="M465 130 C 488 477,349.5 478, 372.5 825" fill="none" stroke="#377E22">
       <title>test.js
 ⬇
 container.js</title>
     </path>
-    <path class="line" d="M465 130 C 480 357,207.5 358, 222.5 585" fill="none" stroke="#377E2288">
+    <path class="line" d="M465 130 C 480 357,207.5 358, 222.5 585" fill="none" stroke="#377E22">
       <title>test.js
 ⬇
 graph.js</title>
     </path>
-    <path class="line" d="M465 130 C 475 242,362.5 243, 372.5 355" fill="none" stroke="#377E2288">
+    <path class="line" d="M465 130 C 475 242,362.5 243, 372.5 355" fill="none" stroke="#377E22">
       <title>test.js
 ⬇
 renderAsGrid.js</title>
     </path>
-    <path class="line" d="M465 130 C 475 242,662.5 243, 672.5 355" fill="none" stroke="#377E2288">
+    <path class="line" d="M465 130 C 475 242,662.5 243, 672.5 355" fill="none" stroke="#377E22">
       <title>test.js
 ⬇
 renderAsLayers.js</title>
     </path>
-    <path class="line" d="M465 130 C 475 242,62.5 243, 72.5 355" fill="none" stroke="#377E2288">
+    <path class="line" d="M465 130 C 475 242,62.5 243, 72.5 355" fill="none" stroke="#377E22">
       <title>test.js
 ⬇
 renderAsPoster.js</title>
@@ -846,16 +848,16 @@ strings.js</title>
   </g>
   <g id='Labels_glad'>
     <text class="folderName" x="10" y="10">glad</text>
-    <text x="10" y="1290" font-size="75%">6 folders, 18 files</text>
+    <text x="10" y="1290" fill='black' font-size="75%">6 folders, 18 files</text>
     <g id='Labels_lib'>
       <text class="folderName" x="27.5" y="195">lib</text>
-      <text x="27.5" y="1255" font-size="75%">3 folders, 16 files, 8 incoming, path: .../glad/</text>
+      <text x="27.5" y="1255" fill='black' font-size="75%">3 folders, 16 files, 8 incoming, path: .../glad/</text>
       <g id='Labels_glad.js'>
         <text class="nodeName" x="502.5" y="260" font-size="120%">glad.js</text>
       </g>
       <g id='Labels_render'>
         <text class="folderName" x="45" y="310">render</text>
-        <text x="45" y="520" font-size="75%">4 files, 6 incoming, 20 outgoing, path: .../glad/lib/</text>
+        <text x="45" y="520" fill='black' font-size="75%">4 files, 6 incoming, 20 outgoing, path: .../glad/lib/</text>
         <g id='Labels_renderAsPoster.js'>
           <text class="nodeName" x="202.5" y="375" font-size="120%">renderAsPoster.js</text>
         </g>
@@ -871,7 +873,7 @@ strings.js</title>
       </g>
       <g id='Labels_models'>
         <text class="folderName" x="195" y="540">models</text>
-        <text x="195" y="990" font-size="75%">9 files, 25 incoming, 1 outgoing, path: .../glad/lib/</text>
+        <text x="195" y="990" fill='black' font-size="75%">9 files, 25 incoming, 1 outgoing, path: .../glad/lib/</text>
         <g id='Labels_graph.js'>
           <text class="nodeName" x="352.5" y="605" font-size="120%">graph.js</text>
         </g>
@@ -902,7 +904,7 @@ strings.js</title>
       </g>
       <g id='Labels_util'>
         <text class="folderName" x="345" y="1010">util</text>
-        <text x="345" y="1220" font-size="75%">2 files, 4 incoming, path: .../glad/lib/</text>
+        <text x="345" y="1220" fill='black' font-size="75%">2 files, 4 incoming, path: .../glad/lib/</text>
         <g id='Labels_svg.js'>
           <text class="nodeName" x="502.5" y="1075" font-size="120%">svg.js</text>
         </g>
@@ -913,14 +915,14 @@ strings.js</title>
     </g>
     <g id='Labels_test'>
       <text class="folderName" x="177.5" y="45">test</text>
-      <text x="177.5" y="175" font-size="75%">1 file, 6 outgoing, path: .../glad/</text>
+      <text x="177.5" y="175" fill='black' font-size="75%">1 file, 6 outgoing, path: .../glad/</text>
       <g id='Labels_test.js'>
         <text class="nodeName" x="335" y="110" font-size="120%">test.js</text>
       </g>
     </g>
     <g id='Labels_cli'>
       <text class="folderName" x="512.5" y="45">cli</text>
-      <text x="512.5" y="175" font-size="75%">1 file, 2 outgoing, path: .../glad/</text>
+      <text x="512.5" y="175" fill='black' font-size="75%">1 file, 2 outgoing, path: .../glad/</text>
       <g id='Labels_index.js'>
         <text class="nodeName" x="670" y="110" font-size="120%">index.js</text>
       </g>

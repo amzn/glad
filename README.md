@@ -82,6 +82,7 @@ Options:
       --lineEffect, --le  Special effect on the lines  [string] [default: "flat"]
   -l, --layers            Display the layers background and numbers  [boolean] [default: false]
   -d, --details           Show additional values for each folders  [boolean] [default: false]
+      --externals         Show external dependencies  [boolean] [default: false]
       --json              Output the graph to file called glad.json  [boolean] [default: false]
       --debug             For tech support  [boolean] [default: false]
       --listFiles         List all input files found  [boolean] [default: false]

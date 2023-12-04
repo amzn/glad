@@ -1,6 +1,6 @@
 {
   "name": "@amazon/glad",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Generate a Layer Diagram view of your source layers",
   "main": "cli/index.js",
   "author": "jp@vteam.com",

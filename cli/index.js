@@ -79,6 +79,12 @@ const arg = yargs(hideBin(process.argv))
     type: 'boolean',
     default: false
   })
+  .option('externals', {
+    alias: 'ex',
+    description: 'Show external dependencies',
+    type: 'boolean',
+    default: false
+  })
   .option('json', {
     description: 'Output the graph to file called glad.json',
     type: 'boolean',

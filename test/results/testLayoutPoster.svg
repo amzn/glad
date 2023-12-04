@@ -152,12 +152,10 @@ Potato</title>
     <g>
       <circle cx="372.5" cy="315" r="10" fill="green"/>
       <text x="372.5" y="315" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
-      <title>123</title>
     </g>
     <g>
       <circle cx="315" cy="355" r="10" fill="blue"/>
       <text x="315" y="355" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">1</text>
-      <title>321</title>
     </g>
   </g>
   <g id='Counters_Farming'>

@@ -506,12 +506,12 @@ renderAsPoster.js</title>
           <text x="632.5" y="280" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">7</text>
           <title>glad.js
 ⬇
-1 glad/lib/models/graph.js
+1 glad/lib/models/constants.js
 2 glad/lib/models/container.js
-3 glad/lib/models/constants.js
-4 glad/lib/render/renderAsPoster.js
-5 glad/lib/render/renderAsGrid.js
-6 glad/lib/render/renderAsLayers.js
+3 glad/lib/models/graph.js
+4 glad/lib/render/renderAsGrid.js
+5 glad/lib/render/renderAsLayers.js
+6 glad/lib/render/renderAsPoster.js
 7 glad/lib/util/strings.js</title>
         </g>
         <g>
@@ -529,11 +529,11 @@ glad.js</title>
             <text x="332.5" y="395" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">5</text>
             <title>renderAsPoster.js
 ⬇
-1 glad/lib/render/renderBase.js
-2 glad/lib/models/constants.js
+1 glad/lib/models/constants.js
+2 glad/lib/models/container.js
 3 glad/lib/models/graph.js
-4 glad/lib/models/container.js
-5 glad/lib/models/layers.js</title>
+4 glad/lib/models/layers.js
+5 glad/lib/render/renderBase.js</title>
           </g>
           <g>
             <circle cx="72.5" cy="355" r="10" fill="blue"/>
@@ -550,10 +550,10 @@ renderAsPoster.js</title>
             <text x="632.5" y="395" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">4</text>
             <title>renderAsGrid.js
 ⬇
-1 glad/lib/render/renderBase.js
-2 glad/lib/models/constants.js
+1 glad/lib/models/constants.js
+2 glad/lib/models/container.js
 3 glad/lib/models/graph.js
-4 glad/lib/models/container.js</title>
+4 glad/lib/render/renderBase.js</title>
           </g>
           <g>
             <circle cx="372.5" cy="355" r="10" fill="blue"/>
@@ -570,10 +570,10 @@ renderAsGrid.js</title>
             <text x="932.5" y="395" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">4</text>
             <title>renderAsLayers.js
 ⬇
-1 glad/lib/render/renderBase.js
-2 glad/lib/models/constants.js
+1 glad/lib/models/constants.js
+2 glad/lib/models/graph.js
 3 glad/lib/models/layers.js
-4 glad/lib/models/graph.js</title>
+4 glad/lib/render/renderBase.js</title>
           </g>
           <g>
             <circle cx="672.5" cy="355" r="10" fill="blue"/>
@@ -590,15 +590,15 @@ renderAsLayers.js</title>
             <text x="632.5" y="475" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">10</text>
             <title>renderBase.js
 ⬇
-1 glad/lib/models/graph.js
-2 glad/lib/models/constants.js
-3 glad/lib/util/strings.js
+1 glad/lib/models/constants.js
+2 glad/lib/models/container.js
+3 glad/lib/models/edge.js
 4 glad/lib/models/edges.js
-5 glad/lib/models/container.js
+5 glad/lib/models/graph.js
 6 glad/lib/models/layer.js
 7 glad/lib/models/layers.js
 8 glad/lib/models/rectangle.js
-9 glad/lib/models/edge.js
+9 glad/lib/util/strings.js
 10 glad/lib/util/svg.js</title>
           </g>
           <g>
@@ -628,11 +628,11 @@ renderBase.js</title>
             <circle cx="222.5" cy="585" r="10" fill="blue"/>
             <text x="222.5" y="585" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">6</text>
             <title>1 glad/lib/glad.js
-2 glad/test/test.js
-3 glad/lib/render/renderAsGrid.js
-4 glad/lib/render/renderAsLayers.js
-5 glad/lib/render/renderAsPoster.js
-6 glad/lib/render/renderBase.js
+2 glad/lib/render/renderAsGrid.js
+3 glad/lib/render/renderAsLayers.js
+4 glad/lib/render/renderAsPoster.js
+5 glad/lib/render/renderBase.js
+6 glad/test/test.js
 ⬇
 graph.js</title>
           </g>
@@ -644,8 +644,8 @@ graph.js</title>
             <title>layers.js
 ⬇
 1 glad/lib/models/constants.js
-2 glad/lib/models/layer.js
-3 glad/lib/models/container.js</title>
+2 glad/lib/models/container.js
+3 glad/lib/models/layer.js</title>
           </g>
           <g>
             <circle cx="522.5" cy="585" r="10" fill="blue"/>
@@ -664,8 +664,8 @@ layers.js</title>
             <title>layer.js
 ⬇
 1 glad/lib/models/constants.js
-2 glad/lib/models/rectangle.js
-3 glad/lib/models/containers.js</title>
+2 glad/lib/models/containers.js
+3 glad/lib/models/rectangle.js</title>
           </g>
           <g>
             <circle cx="222.5" cy="665" r="10" fill="blue"/>
@@ -682,8 +682,8 @@ layer.js</title>
             <text x="782.5" y="705" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">2</text>
             <title>edges.js
 ⬇
-1 glad/lib/models/edge.js
-2 glad/lib/models/container.js</title>
+1 glad/lib/models/container.js
+2 glad/lib/models/edge.js</title>
           </g>
           <g>
             <circle cx="522.5" cy="665" r="10" fill="blue"/>
@@ -718,8 +718,8 @@ edge.js</title>
             <text x="782.5" y="785" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">2</text>
             <title>containers.js
 ⬇
-1 glad/lib/models/container.js
-2 glad/lib/models/constants.js</title>
+1 glad/lib/models/constants.js
+2 glad/lib/models/container.js</title>
           </g>
           <g>
             <circle cx="522.5" cy="745" r="10" fill="blue"/>
@@ -742,15 +742,15 @@ containers.js</title>
             <circle cx="372.5" cy="825" r="10" fill="blue"/>
             <text x="372.5" y="825" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">10</text>
             <title>1 glad/lib/glad.js
-2 glad/test/test.js
-3 glad/lib/models/containers.js
-4 glad/lib/models/edge.js
-5 glad/lib/models/edges.js
-6 glad/lib/models/graph.js
-7 glad/lib/models/layers.js
-8 glad/lib/render/renderAsGrid.js
-9 glad/lib/render/renderAsPoster.js
-10 glad/lib/render/renderBase.js
+2 glad/lib/models/containers.js
+3 glad/lib/models/edge.js
+4 glad/lib/models/edges.js
+5 glad/lib/models/graph.js
+6 glad/lib/models/layers.js
+7 glad/lib/render/renderAsGrid.js
+8 glad/lib/render/renderAsPoster.js
+9 glad/lib/render/renderBase.js
+10 glad/test/test.js
 ⬇
 container.js</title>
           </g>
@@ -761,15 +761,15 @@ container.js</title>
             <text x="222.5" y="905" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">11</text>
             <title>1 glad/cli/index.js
 2 glad/lib/glad.js
-3 glad/test/test.js
-4 glad/lib/models/container.js
-5 glad/lib/models/containers.js
-6 glad/lib/models/layer.js
-7 glad/lib/models/layers.js
-8 glad/lib/render/renderAsGrid.js
-9 glad/lib/render/renderAsLayers.js
-10 glad/lib/render/renderAsPoster.js
-11 glad/lib/render/renderBase.js
+3 glad/lib/models/container.js
+4 glad/lib/models/containers.js
+5 glad/lib/models/layer.js
+6 glad/lib/models/layers.js
+7 glad/lib/render/renderAsGrid.js
+8 glad/lib/render/renderAsLayers.js
+9 glad/lib/render/renderAsPoster.js
+10 glad/lib/render/renderBase.js
+11 glad/test/test.js
 ⬇
 constants.js</title>
           </g>
@@ -825,8 +825,8 @@ strings.js</title>
           <title>test.js
 ⬇
 1 glad/lib/models/constants.js
-2 glad/lib/models/graph.js
-3 glad/lib/models/container.js
+2 glad/lib/models/container.js
+3 glad/lib/models/graph.js
 4 glad/lib/render/renderAsGrid.js
 5 glad/lib/render/renderAsLayers.js
 6 glad/lib/render/renderAsPoster.js</title>
@@ -840,8 +840,8 @@ strings.js</title>
           <text x="800" y="130" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">2</text>
           <title>index.js
 ⬇
-1 glad/lib/models/constants.js
-2 glad/lib/glad.js</title>
+1 glad/lib/glad.js
+2 glad/lib/models/constants.js</title>
         </g>
       </g>
     </g>

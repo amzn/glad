@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.1]  2023-11-18
+
+    - Show Dart module versions
+
+## [1.2.0]  2023-08-07
+
+    - Support for Flutter/Dart projects
+
+## [1.1.5]  2023-08-07
+
+    - Update packages
+
+## [1.1.4]  2023-01-12
+
+    - Exclude "node_modules" from import targets
+
+## [1.1.3]  2023-01-11
+
+    - Fix for running on Windows
+
 ## [1.1.2]  2022-08-04
 
     - package.json fix "main: cli/index.js"

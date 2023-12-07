@@ -7,8 +7,10 @@ import { GLAD } from '../lib/glad.js'
 import { createRequire } from 'module'
 import yargs from 'yargs'
 import { hideBin } from 'yargs/helpers'
-const require = createRequire(import.meta.url)
 
+const require = createRequire(import.meta.url)
+const fs = require('fs')
+const { exec } = require('node:child_process')
 const packageJSon = require('../package.json')
 
 // eslint-disable-next-line no-unused-expressions
@@ -77,6 +79,12 @@ const arg = yargs(hideBin(process.argv))
     type: 'boolean',
     default: false
   })
+  .option('externals', {
+    alias: 'ex',
+    description: 'Show external dependencies',
+    type: 'boolean',
+    default: false
+  })
   .option('json', {
     description: 'Output the graph to file called glad.json',
     type: 'boolean',
@@ -98,7 +106,7 @@ const arg = yargs(hideBin(process.argv))
     type: 'boolean',
     default: false
   })
-// .version(true, 'Show version number', packageJSon.version)
+  // .version(true, 'Show version number', packageJSon.version)
   .alias('v', 'version')
   .wrap(null)
   .epilog('for more information visit https://github.com/amzn/generate-layer-architecture-diagram')
@@ -118,8 +126,23 @@ if (!arg.silent) {
   showTitle()
 }
 
+if (!arg.silent) {
+  console.time('Completed')
+}
+
 const glad = new GLAD(arg)
-glad.scanSourceFilesBuildGraphAndGenerateSvg()
+
+if (fs.existsSync('./pubspec.yaml')) {
+  //  Dart Project
+  runDartDept()
+} else {
+  // NodeJS project
+  glad.scanSourceFilesBuildGraphAndGenerateSvg()
+}
+
+if (!arg.silent) {
+  console.timeEnd('Completed')
+}
 
 if (glad.graph.getHasCircularDependencies()) {
   console.error(chalk.red('found some circular dependencies'))
@@ -132,4 +155,26 @@ if (glad.graph.getHasCircularDependencies()) {
  */
 function showTitle () {
   console.info(chalk.blueBright('GLAD') + '   ' + chalk.blue(packageJSon.version || ''))
+}
+
+// run the `ls` command using exec
+/**
+ *
+ */
+function runDartDept () {
+  exec('dart pub deps --json', (err, output) => {
+    // once the command has completed, the callback function is called
+    if (err) {
+      // log and return if we encounter an error
+      console.error('could not execute command: ', err)
+      return
+    }
+    glad.loadGraphFromJSON(output)
+  })
+
+  // // when a child process exits, it fires
+  // // the "close" event
+  // command.on('close', (code) => {
+  //   console.log('process has exited')
+  // })
 }

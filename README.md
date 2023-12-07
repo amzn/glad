@@ -1,12 +1,14 @@
 # GLAD - Generate Layer Architecture Diagram
 
-Automatically generate **layer diagram** view of your Javascript/Typescript source code dependencies.
+Automatically generate **layer diagram** view of your Javascript/Typescript/Dart source code dependencies.
 
 ## Motivation
 
 View and Keep your project source files layer dependencies clean. Avoid circular reference or referencing an upper layer from a lower layer.  
 
-Supports source files of type JS & TS, simply launch the ```glad``` and open the resulting ```glad.svg``` file.
+### Project type supported 
+* NodeJS - source files of type **JS & TS**, simply launch the ```glad``` and open the resulting ```glad.svg``` file.
+* **NEW** - Now supports **Flutter/Dart** package dependencies
 
 ## Example
 
@@ -80,6 +82,7 @@ Options:
       --lineEffect, --le  Special effect on the lines  [string] [default: "flat"]
   -l, --layers            Display the layers background and numbers  [boolean] [default: false]
   -d, --details           Show additional values for each folders  [boolean] [default: false]
+      --externals         Show external dependencies  [boolean] [default: false]
       --json              Output the graph to file called glad.json  [boolean] [default: false]
       --debug             For tech support  [boolean] [default: false]
       --listFiles         List all input files found  [boolean] [default: false]

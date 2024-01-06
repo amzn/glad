@@ -85,6 +85,11 @@ const arg = yargs(hideBin(process.argv))
     type: 'boolean',
     default: false
   })
+  .option('dev', {
+    description: 'Show Dev dependencies',
+    type: 'boolean',
+    default: false
+  })
   .option('json', {
     description: 'Output the graph to file called glad.json',
     type: 'boolean',
@@ -169,7 +174,9 @@ function runDartDept () {
       console.error('could not execute command: ', err)
       return
     }
-    glad.loadGraphFromJSON(output)
+    // Read the input dependency structure
+    const blob = JSON.parse(output)
+    glad.loadGraphFromFlutterDependencies(blob)
   })
 
   // // when a child process exits, it fires

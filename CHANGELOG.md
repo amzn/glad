@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.4]  2024-01-06
+
+    - Improve Flutter/Dar dependency container names
+
+## [1.2.3]  2023-12-04
+
+    - Sort tooltips
+
+## [1.2.2]  2023-12-04
+
+    - Better colors
+
 ## [1.2.1]  2023-11-18
 
     - Show Dart module versions

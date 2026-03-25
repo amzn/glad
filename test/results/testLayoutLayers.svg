@@ -145,10 +145,26 @@
       <rect x="4" y="189" width="292" height="72" rx="8" ry="8" class="nodeFile"/>
     </g>
     <g id='Edges'>
-      <line x1="580" y1="95" x2="320" y2="205" class="line" filter='url(#outlineBlack)'/>
-      <line x1="880" y1="95" x2="620" y2="205" class="line" filter='url(#outlineBlack)'/>
-      <line x1="280" y1="95" x2="20" y2="205" class="lineRed" filter='url(#outlineBlack)'/>
-      <line x1="280" y1="245" x2="20" y2="55" class="lineRed" filter='url(#outlineBlack)'/>
+      <line x1="580" y1="95" x2="320" y2="205" class="line" filter='url(#outlineBlack)'>
+        <title>Barn2
+⬇
+Chickens</title>
+      </line>
+      <line x1="880" y1="95" x2="620" y2="205" class="line" filter='url(#outlineBlack)'>
+        <title>PersonA
+⬇
+PersonB</title>
+      </line>
+      <line x1="280" y1="95" x2="20" y2="205" class="lineRed" filter='url(#outlineBlack)'>
+        <title>Potato
+⬇
+Yam</title>
+      </line>
+      <line x1="280" y1="245" x2="20" y2="55" class="lineRed" filter='url(#outlineBlack)'>
+        <title>Yam
+⬇
+Potato</title>
+      </line>
     </g>
     <g id='Counters_Barn2'>
       <g>

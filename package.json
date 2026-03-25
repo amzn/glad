@@ -1,6 +1,6 @@
 {
   "name": "@jpdup/glad",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Generate a Layer Diagram view of your source layers",
   "main": "cli/index.js",
   "author": "jp@vteam.com",
@@ -32,18 +32,18 @@
     "yargs": "^18.0.0"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "depcheck": "^1.4.7",
-    "eslint": "^9.39.2",
-    "eslint-plugin-jsdoc": "^61.5.0",
-    "eslint-plugin-perfectionist": "^5.1.0",
-    "globals": "^16.5.0",
-    "mocha": "^11.7.5",
-    "neostandard": "^0.12.2"
+    "eslint": "^10.1.0",
+    "eslint-plugin-jsdoc": "^62.8.0",
+    "eslint-plugin-perfectionist": "^5.7.0",
+    "globals": "^17.4.0",
+    "mocha": "^11.7.5"
   },
   "scripts": {
     "test": "mocha",
     "lint": "eslint . --fix",
     "release": "npm install && depcheck . && eslint . --fix && mocha && npm run start",
-    "start": "node cli/index.js -sld -e '**/demoApp/**' ."
+    "start": "node cli/index.js -sld -e '**/demoApp/**' ."    
   }
 }

@@ -61,9 +61,22 @@ By adding "glad" to your build step, you will be alerted if you introduce a circ
 {
   "scripts": {
     "build": "glad ."
-  }
+}
 }
 ```
+
+### Exit Codes
+
+`glad` returns explicit status codes so CI can fail on architecture issues:
+
+* `0` success
+* `2` invalid input (for example invalid or missing DOT file)
+* `3` output write error
+* `4` no files found to analyze
+* `99` upward dependencies found
+* `100` circular dependencies found
+
+When both upward and circular dependencies are present, `100` is returned.
 
 ## Execute
 

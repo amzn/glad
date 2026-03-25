@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.2]  2026-03-25
+
+    - Stabilize CLI exit codes for CI integrations with explicit status mapping
+    - Add `99` exit code for upward dependencies and keep `100` for circular dependencies (highest priority)
+    - Return non-zero when no files are found to analyze
+    - Improve error classification for invalid input and output write failures
+    - Ensure Swift extension-only files are not incorrectly reported as orphan nodes
+    - Add CLI exit-code test coverage
+    - Document exit-code contract in README
+
 ## [1.4.1]  2026-01-07
 
     - Fix upward dependency count discrepancy: Count now accurately reflects rendered upward dependencies across all view modes and line filtering options

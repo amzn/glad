@@ -15,6 +15,34 @@ const fs = require('fs')
 
 const packageJson = require('../package.json')
 
+const EXIT_CODES = {
+  CIRCULAR_DEPENDENCY: 100,
+  GENERAL_ERROR: 1,
+  INPUT_ERROR: 2,
+  NO_FILES_FOUND: 4,
+  OUTPUT_ERROR: 3,
+  UPWARD_DEPENDENCY: 99
+}
+
+/**
+ * Classify runtime failures to stable CLI exit codes.
+ * @param {Error & {code?: string}} error
+ * @returns {number}
+ */
+function classifyErrorCode (error) {
+  const message = error && error.message ? error.message : ''
+
+  if (message.startsWith('DOT file not found:') || message.startsWith('Invalid DOT format:')) {
+    return EXIT_CODES.INPUT_ERROR
+  }
+
+  if (error && ['EACCES', 'EISDIR', 'ENOENT', 'ENOSPC', 'ENOTDIR', 'EPERM', 'EROFS'].includes(error.code)) {
+    return EXIT_CODES.OUTPUT_ERROR
+  }
+
+  return EXIT_CODES.GENERAL_ERROR
+}
+
 /**
  * Main entry point
  */
@@ -34,75 +62,93 @@ async function main () {
   // Set consoleOutput on context for cleaner access
   glad.context.consoleOutput = new ConsoleOutput({ debug: arg.debug, silent: arg.silent })
 
-  if (arg.debug) {
-    glad.context.consoleOutput.debug(arg)
-  }
-
-  // Title and Version
-  glad.context.consoleOutput.title('GLAD ' + packageJson.version)
-
-  // Start to measure the time spent running the app
-  glad.context.consoleOutput.timeStart('Completed')
-
-  //
-  // Determine the input context
-  //
-  if (arg.input && arg.input.endsWith('.dot')) {
-    // DOT file input
-    glad.parseDot.graphSvgFromDotFile()
-  } else if (fs.existsSync('./pubspec.yaml')) {
-    //  Dart Project
-    await glad.flutterDartParser.graphSvgFromFlutterDart()
-  } else if (SwiftParser.isSwiftProject(arg.input)) {
-    // Swift Project
-    glad.swiftParser.generateDependenciesFromSwiftFiles()
-  } else {
-    // NodeJS project
-    glad.jsTsParser.generateDependenciesFromSourceFiles()
-  }
-
-  glad.context.processTheGraph()
-
-  const totalNodes = glad.graph.getAllNodes().length
-  const totalEdges = glad.graph.edges.length
-  const orphanNodes = glad.graph.getOrphanNodes()
-  const orphanCount = orphanNodes.length
-  const upDependencyCount = glad.graph.getUpDependenciesCount()
-  const circularCount = glad.graph.getCircularDependenciesCount()
-
-  // Handle --orphans flag
-  if (arg.orphans) {
-    if (orphanCount === 0) {
-      glad.context.consoleOutput.log('No orphan nodes found.')
-    } else {
-      glad.context.consoleOutput.warning(`Found ${orphanCount} orphan node(s):`)
-      orphanNodes.forEach(node => {
-        glad.context.consoleOutput.log(`  - ${node.name}`)
-      })
+  try {
+    if (arg.debug) {
+      glad.context.consoleOutput.debug(arg)
     }
-  }
 
-  glad.context.consoleOutput.log(`Nodes: ${totalNodes}, Edges: ${totalEdges}`)
+    // Title and Version
+    glad.context.consoleOutput.title('GLAD ' + packageJson.version)
 
-  // Warning of orphan nodes
-  if (orphanCount > 0) {
-    glad.context.consoleOutput.warning(`Orphan nodes: ${orphanCount}`)
-  }
+    // Start to measure the time spent running the app
+    glad.context.consoleOutput.timeStart('Completed')
 
-  // Warning of upward nodes
-  if (upDependencyCount > 0) {
-    glad.context.consoleOutput.warning(`Upward dependencies: ${upDependencyCount}`)
-  }
+    //
+    // Determine the input context
+    //
+    if (arg.input && arg.input.endsWith('.dot')) {
+      // DOT file input
+      glad.parseDot.graphSvgFromDotFile()
+    } else if (fs.existsSync('./pubspec.yaml')) {
+      //  Dart Project
+      await glad.flutterDartParser.graphSvgFromFlutterDart()
+    } else if (SwiftParser.isSwiftProject(arg.input)) {
+      // Swift Project
+      glad.swiftParser.generateDependenciesFromSwiftFiles()
+    } else {
+      // NodeJS project
+      glad.jsTsParser.generateDependenciesFromSourceFiles()
+    }
 
-  // Error of circular edges
-  if (circularCount > 0) {
-    glad.context.consoleOutput.error(`Circular dependencies: ${circularCount}`)
-  }
+    const graphWasProcessed = glad.context.processTheGraph()
+    if (!graphWasProcessed) {
+      process.exitCode = EXIT_CODES.NO_FILES_FOUND
+      return
+    }
 
-  glad.context.consoleOutput.timeEnd('Completed')
+    const totalNodes = glad.graph.getAllNodes().length
+    const totalEdges = glad.graph.edges.length
+    const orphanNodes = glad.graph.getOrphanNodes()
+    const orphanCount = orphanNodes.length
+    const upDependencyCount = glad.graph.getUpDependenciesCount()
+    const circularCount = glad.graph.getCircularDependenciesCount()
 
-  if (circularCount > 0) {
-    process.exit(100)
+    // Handle --orphans flag
+    if (arg.orphans) {
+      if (orphanCount === 0) {
+        glad.context.consoleOutput.log('No orphan nodes found.')
+      } else {
+        glad.context.consoleOutput.warning(`Found ${orphanCount} orphan node(s):`)
+        orphanNodes.forEach(node => {
+          glad.context.consoleOutput.log(`  - ${node.name}`)
+        })
+      }
+    }
+
+    glad.context.consoleOutput.log(`Nodes: ${totalNodes}, Edges: ${totalEdges}`)
+
+    // Warning of orphan nodes
+    if (orphanCount > 0) {
+      glad.context.consoleOutput.warning(`Orphan nodes: ${orphanCount}`)
+    }
+
+    // Warning of upward nodes
+    if (upDependencyCount > 0) {
+      glad.context.consoleOutput.warning(`Upward dependencies: ${upDependencyCount}`)
+    }
+
+    // Error of circular edges
+    if (circularCount > 0) {
+      glad.context.consoleOutput.error(`Circular dependencies: ${circularCount}`)
+    }
+
+    glad.context.consoleOutput.timeEnd('Completed')
+
+    if (circularCount > 0) {
+      process.exitCode = EXIT_CODES.CIRCULAR_DEPENDENCY
+      return
+    }
+
+    if (upDependencyCount > 0) {
+      process.exitCode = EXIT_CODES.UPWARD_DEPENDENCY
+    }
+  } catch (error) {
+    const exitCode = classifyErrorCode(error)
+    glad.context.consoleOutput.error(error.message)
+    if (arg.debug) {
+      glad.context.consoleOutput.debug(error.stack)
+    }
+    process.exitCode = exitCode
   }
 }
 

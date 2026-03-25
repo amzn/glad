@@ -15,6 +15,7 @@ import '../test/test_js.js'
 import '../test/test_ts.js'
 import '../test/test_swift.js'
 import '../test/test_dot.js'
+import '../test/test_cli_exit_codes.js'
 
 const graph = new Graph()
 graph.rootNode = new Container(null, 'Farming')

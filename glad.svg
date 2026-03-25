@@ -510,6 +510,11 @@ container.js</title>
 ⬇
 parser.js</title>
       </path>
+      <path d="M782.5 475 C 806.5 845,648.5 845, 672.5 1215" fill="none" class="line">
+        <title>parserSwift.js
+⬇
+container.js</title>
+      </path>
       <path d="M782.5 475 C 792.5 495,662.5 495, 672.5 515" fill="none" class="line">
         <title>parserSwift.js
 ⬇
@@ -788,11 +793,12 @@ parserDot.js</title>
           <g id='Counters_parserSwift.js'>
             <g>
               <circle cx="782.5" cy="475" r="10" fill="green"/>
-              <text x="782.5" y="475" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">2</text>
+              <text x="782.5" y="475" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">3</text>
               <title>parserSwift.js
 ⬇
-1 glad/lib/parsers/parser.js
-2 glad/lib/util/strings.js</title>
+1 glad/lib/models/container.js
+2 glad/lib/parsers/parser.js
+3 glad/lib/util/strings.js</title>
             </g>
             <g>
               <circle cx="522.5" cy="435" r="10" fill="blue"/>
@@ -1099,7 +1105,7 @@ containers.js</title>
             </g>
             <g>
               <circle cx="672.5" cy="1215" r="10" fill="blue"/>
-              <text x="672.5" y="1215" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">12</text>
+              <text x="672.5" y="1215" fill="white" font-size="10" text-anchor="middle" dominant-baseline="central">13</text>
               <title>1 glad/lib/models/containers.js
 2 glad/lib/models/edge.js
 3 glad/lib/models/edges.js
@@ -1107,11 +1113,12 @@ containers.js</title>
 5 glad/lib/models/layers.js
 6 glad/lib/parsers/parserDot.js
 7 glad/lib/parsers/parserJsTs.js
-8 glad/lib/render/renderAsGrid.js
-9 glad/lib/render/renderAsLayers.js
-10 glad/lib/render/renderAsPoster.js
-11 glad/lib/render/renderBase.js
-12 glad/test/test.js
+8 glad/lib/parsers/parserSwift.js
+9 glad/lib/render/renderAsGrid.js
+10 glad/lib/render/renderAsLayers.js
+11 glad/lib/render/renderAsPoster.js
+12 glad/lib/render/renderBase.js
+13 glad/test/test.js
 ⬇
 container.js</title>
             </g>
@@ -1309,7 +1316,7 @@ test_dot.js</title>
         </g>
         <g id='Labels_parsers'>
           <text class="folderName" x="195" y="390">parsers</text>
-          <text x="195" y="600" fill='black' font-size="75%">5 files, 5 incoming, 9 outgoing, path: .../glad/lib/</text>
+          <text x="195" y="600" fill='black' font-size="75%">5 files, 5 incoming, 10 outgoing, path: .../glad/lib/</text>
           <g id='Labels_parserDot.js'>
             <text class="nodeName" x="352.5" y="455" font-size="120%">parserDot.js</text>
           </g>
@@ -1347,7 +1354,7 @@ test_dot.js</title>
         </g>
         <g id='Labels_models'>
           <text class="folderName" x="495" y="930">models</text>
-          <text x="495" y="1380" fill='black' font-size="75%">9 files, 31 incoming, 1 outgoing, path: .../glad/lib/</text>
+          <text x="495" y="1380" fill='black' font-size="75%">9 files, 32 incoming, 1 outgoing, path: .../glad/lib/</text>
           <g id='Labels_graph.js'>
             <text class="nodeName" x="652.5" y="995" font-size="120%">graph.js</text>
           </g>

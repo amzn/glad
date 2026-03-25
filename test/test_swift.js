@@ -151,4 +151,77 @@ public class UserService {
       }
     }
   })
+
+  it('should not mark extension-only Swift files as orphan nodes', function () {
+    const glad = new GLAD({
+      edges: Constants.EDGES_BOTH,
+      exclude: '**/*test*.js',
+      input: '.',
+      lineEffect: 'flat',
+      output: 'test/results/test_output_swift.svg',
+      silent: true
+    })
+
+    const swiftFiles = [
+      {
+        content: `
+import SwiftUI
+// typed key accessors
+// should remain non-orphan even with comments
+
+extension LocalizedStringResource {
+    static var profileTitle: Self {
+        "profile_title"
+    }
+}
+`,
+        name: 'LocalizedStringResource+Profile.swift'
+      },
+      {
+        content: `
+import Foundation
+
+public struct LonelyModel {
+    let id: String
+}
+`,
+        name: 'LonelyModel.swift'
+      }
+    ]
+
+    const testDir = 'test_swift_orphan_extension'
+    if (!fs.existsSync(testDir)) {
+      fs.mkdirSync(testDir)
+    }
+
+    const filePaths = []
+    swiftFiles.forEach(file => {
+      const filePath = path.join(testDir, file.name)
+      fs.writeFileSync(filePath, file.content)
+      filePaths.push(filePath)
+    })
+
+    try {
+      glad.swiftParser.processSwiftFiles(filePaths)
+      glad.context.processTheGraph()
+
+      const orphanNodeNames = glad.graph.getOrphanNodes().map(node => node.name)
+      if (orphanNodeNames.includes('LocalizedStringResource+Profile.swift')) {
+        throw new Error('Extension-only file should not be marked as orphan')
+      }
+      if (!orphanNodeNames.includes('LonelyModel.swift')) {
+        throw new Error('Regular disconnected file should still be marked as orphan')
+      }
+    } finally {
+      swiftFiles.forEach(file => {
+        const filePath = path.join(testDir, file.name)
+        if (fs.existsSync(filePath)) {
+          fs.unlinkSync(filePath)
+        }
+      })
+      if (fs.existsSync(testDir)) {
+        fs.rmdirSync(testDir)
+      }
+    }
+  })
 })

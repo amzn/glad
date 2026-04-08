@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.3]  2026-04-08
+
+    - Skip .swiftpm and DerivedData directories when scanning Swift projects to prevent hangs on large SPM workspaces
+
 ## [1.4.2]  2026-03-25
 
     - Stabilize CLI exit codes for CI integrations with explicit status mapping

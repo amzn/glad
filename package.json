@@ -1,6 +1,6 @@
 {
   "name": "@jpdup/glad",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "Generate a Layer Diagram view of your source layers",
   "main": "cli/index.js",
   "author": "jp@vteam.com",
@@ -44,6 +44,6 @@
     "test": "mocha",
     "lint": "eslint . --fix",
     "release": "npm install && depcheck . && eslint . --fix && mocha && npm run start",
-    "start": "node cli/index.js -sld -e '**/demoApp/**' ."    
+    "start": "node cli/index.js -sld -e '**/demoApp/**' ."
   }
 }

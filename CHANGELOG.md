@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.4]  2026-06-08
+
+    - Update tree-sitter to ^0.22.4 to align with tree-sitter-swift peer requirement
+    - Update ts-morph to ^28.0.0 for improved TypeScript AST manipulation
+    - Update dev dependencies (eslint, eslint-plugin-jsdoc, eslint-plugin-perfectionist, globals, mocha)
+
 ## [1.4.3]  2026-04-08
 
     - Skip .swiftpm and DerivedData directories when scanning Swift projects to prevent hangs on large SPM workspaces

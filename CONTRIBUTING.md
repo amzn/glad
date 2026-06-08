@@ -42,6 +42,56 @@ GitHub provides additional document on [forking a repository](https://help.githu
 
 Looking at the existing issues is a great way to find something to contribute on. As our projects, by default, use the default GitHub issue labels (enhancement/bug/duplicate/help wanted/invalid/question/wont-fix), looking at any 'help wanted' issues is a great place to start.
 
+## Publishing a Release
+
+To publish a new version of `@jpdup/glad` to npm:
+
+1. **Ensure all changes are committed and tested:**
+
+   ```bash
+   npm run release
+   ```
+
+   This command runs the full pipeline: `npm install && depcheck . && eslint . --fix && mocha && npm run start`
+
+2. **Update version in package.json:**
+   * Update the `version` field to the new semantic version (e.g., `1.4.5`)
+   * Update `CHANGELOG.md` with a new entry describing the changes
+
+3. **Commit the version bump:**
+
+   ```bash
+   git add package.json package-lock.json CHANGELOG.md
+   git commit -m "chore(release): version X.Y.Z"
+   ```
+
+4. **Create a git tag:**
+
+   ```bash
+   git tag -a vX.Y.Z -m "Release version X.Y.Z"
+   ```
+
+5. **Push to repository:**
+
+   ```bash
+   git push origin main --tags
+   ```
+
+6. **Publish to npm:**
+
+   ```bash
+   npm publish
+   ```
+
+   You must have npm credentials configured. If publishing for the first time, authenticate with:
+
+   ```bash
+   npm login
+   ```
+
+7. **Verify the publication:**
+   Visit <https://www.npmjs.com/package/@jpdup/glad> to confirm the new version appears.
+
 ## Code of Conduct
 
 This project has adopted the [Amazon Open Source Code of Conduct](https://aws.github.io/code-of-conduct).

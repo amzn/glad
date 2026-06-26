@@ -1,5 +1,5 @@
 <?xml version="1.0" standalone="no"?>
-<svg width="670" height="300" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+<svg width="770" height="400" viewBox="0 0 770 400" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
   <style>
     .layerRectangle {
       stroke: black;
@@ -114,34 +114,36 @@
     </marker>
   </defs>
   <rect width="100%" height="100%" fill="white"/>
-  <g id='Node_lib'>
-    <rect x="4" y="4" width="662" height="292" rx="2" ry="2" class="nodeFolder"/>
-    <g id='Node_main.dart'>
-      <rect x="189" y="39" width="292" height="72" rx="8" ry="8" class="nodeFile"/>
-    </g>
-    <g id='Node_utils'>
-      <rect x="321.5" y="119" width="327" height="142" rx="2" ry="2" class="nodeFolder"/>
-      <g id='Node_helper.dart'>
-        <rect x="339" y="154" width="292" height="72" rx="8" ry="8" class="nodeFile"/>
+  <g transform="translate(50, 50)">
+    <g id='Node_lib'>
+      <rect x="4" y="4" width="662" height="292" rx="2" ry="2" class="nodeFolder"/>
+      <g id='Node_main.dart'>
+        <rect x="189" y="39" width="292" height="72" rx="8" ry="8" class="nodeFile"/>
+      </g>
+      <g id='Node_utils'>
+        <rect x="321.5" y="119" width="327" height="142" rx="2" ry="2" class="nodeFolder"/>
+        <g id='Node_helper.dart'>
+          <rect x="339" y="154" width="292" height="72" rx="8" ry="8" class="nodeFile"/>
+        </g>
+      </g>
+      <g id='Node_home_screen.dart'>
+        <rect x="21.5" y="119" width="292" height="72" rx="8" ry="8" class="nodeFile"/>
       </g>
     </g>
-    <g id='Node_home_screen.dart'>
-      <rect x="21.5" y="119" width="292" height="72" rx="8" ry="8" class="nodeFile"/>
-    </g>
-  </g>
-  <g id='Labels_lib'>
-    <text class="folderName" x="10" y="10">lib</text>
-    <g id='Labels_main.dart'>
-      <text class="nodeName" x="335" y="75" font-size="120%">main.dart</text>
-    </g>
-    <g id='Labels_utils'>
-      <text class="folderName" x="327.5" y="125">utils</text>
-      <g id='Labels_helper.dart'>
-        <text class="nodeName" x="485" y="190" font-size="120%">helper.dart</text>
+    <g id='Labels_lib'>
+      <text class="folderName" x="10" y="10">lib</text>
+      <g id='Labels_main.dart'>
+        <text class="nodeName" x="335" y="75" font-size="120%">main.dart</text>
       </g>
-    </g>
-    <g id='Labels_home_screen.dart'>
-      <text class="nodeName" x="167.5" y="155" font-size="120%">home_screen.dart</text>
+      <g id='Labels_utils'>
+        <text class="folderName" x="327.5" y="125">utils</text>
+        <g id='Labels_helper.dart'>
+          <text class="nodeName" x="485" y="190" font-size="120%">helper.dart</text>
+        </g>
+      </g>
+      <g id='Labels_home_screen.dart'>
+        <text class="nodeName" x="167.5" y="155" font-size="120%">home_screen.dart</text>
+      </g>
     </g>
   </g>
 </svg>

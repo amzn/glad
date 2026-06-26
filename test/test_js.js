@@ -6,12 +6,14 @@ import { Constants } from '../lib/models/constants.js'
 
 describe('JavaScript Dependency Detection', function () {
   it('should detect JavaScript import/export dependencies correctly', function () {
+    const outputFilePath = 'test/results/test_output_js.svg'
+
     const glad = new GLAD({
       edges: Constants.EDGES_BOTH,
       exclude: '**/*test*.js',
       input: '.',
       lineEffect: 'flat',
-      output: 'test/results/test_output_js.svg',
+      output: outputFilePath,
       silent: true
     })
 
@@ -101,6 +103,10 @@ export default App
       fs.mkdirSync(testDir)
     }
 
+    if (fs.existsSync(outputFilePath)) {
+      fs.unlinkSync(outputFilePath)
+    }
+
     const filePaths = []
     jsFiles.forEach(file => {
       const filePath = path.join(testDir, file.name)
@@ -111,6 +117,14 @@ export default App
     try {
       // Process JavaScript files
       glad.jsTsParser.generateDependenciesFromSourceFiles()
+      const graphWasProcessed = glad.context.processTheGraph()
+      if (!graphWasProcessed) {
+        throw new Error('Graph should be processed successfully')
+      }
+
+      if (!fs.existsSync(outputFilePath)) {
+        throw new Error('SVG output should be generated')
+      }
 
       // Verify dependencies were created correctly
       const dependencies = glad.allFileImports

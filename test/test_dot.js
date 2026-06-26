@@ -7,6 +7,8 @@ import { GLAD } from '../lib/glad.js'
 
 describe('DOT File Support', function () {
   it('generates SVG from DOT file with exclude patterns', function () {
+    const outputFilePath = './test/results/test_output_dot.svg'
+
     // Test the most complex use case: hierarchical DOT content with exclude patterns
     const dotContent = `
 digraph G {
@@ -21,7 +23,7 @@ digraph G {
     const gladWithExclude = new GLAD({
       exclude: ['**/test/**'],
 
-      output: './test/results/test_output_dot.svg',
+      output: outputFilePath,
       silent: true
     })
 
@@ -29,15 +31,21 @@ digraph G {
     const dotFilePath = './test_temp.dot'
     fs.writeFileSync(dotFilePath, dotContent)
 
+    if (fs.existsSync(outputFilePath)) {
+      fs.unlinkSync(outputFilePath)
+    }
+
     try {
       // Set input to the temp file
       gladWithExclude.options.input = dotFilePath
 
-      // Process the DOT file (this should generate SVG with exclude patterns applied)
+      // Load the DOT graph and then process it the same way the CLI does.
       gladWithExclude.parseDot.graphSvgFromDotFile()
+      const graphWasProcessed = gladWithExclude.context.processTheGraph()
+      assert.strictEqual(graphWasProcessed, true, 'Graph should be processed successfully')
 
       // Check that SVG file was created
-      assert(fs.existsSync('./test/results/test_output_dot.svg'), 'SVG file should be generated')
+      assert(fs.existsSync(outputFilePath), 'SVG file should be generated')
 
       // Verify that hierarchical nodes were created correctly with exclude patterns
       const allNodes = gladWithExclude.graph.getAllNodes()

@@ -21,10 +21,11 @@ describe('CLI Exit Codes', function () {
   it('returns 99 when upward dependencies are found without circular dependencies', function () {
     const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'glad-upward-'))
     const dotPath = path.join(tempDir, 'upward.dot')
+    const outputPath = path.join(tempDir, 'upward.svg')
     fs.writeFileSync(dotPath, 'digraph G { "a" -> "b"; "b" -> "c"; "c" -> "a"; }')
 
     try {
-      const result = runGlad([dotPath, '-s'])
+      const result = runGlad([dotPath, '-s', '-o', outputPath])
       assert.strictEqual(result.status, 99)
     } finally {
       fs.rmSync(tempDir, { force: true, recursive: true })
@@ -34,10 +35,11 @@ describe('CLI Exit Codes', function () {
   it('returns 100 when circular dependencies are found', function () {
     const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'glad-circular-'))
     const dotPath = path.join(tempDir, 'circular.dot')
+    const outputPath = path.join(tempDir, 'circular.svg')
     fs.writeFileSync(dotPath, 'digraph G { "a" -> "b"; "b" -> "a"; }')
 
     try {
-      const result = runGlad([dotPath, '-s'])
+      const result = runGlad([dotPath, '-s', '-o', outputPath])
       assert.strictEqual(result.status, 100)
     } finally {
       fs.rmSync(tempDir, { force: true, recursive: true })
@@ -46,9 +48,10 @@ describe('CLI Exit Codes', function () {
 
   it('returns 4 when no input files are found', function () {
     const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'glad-empty-'))
+    const outputPath = path.join(tempDir, 'empty.svg')
 
     try {
-      const result = runGlad([tempDir, '-s'])
+      const result = runGlad([tempDir, '-s', '-o', outputPath])
       assert.strictEqual(result.status, 4)
     } finally {
       fs.rmSync(tempDir, { force: true, recursive: true })
@@ -58,10 +61,11 @@ describe('CLI Exit Codes', function () {
   it('returns 2 for invalid DOT input', function () {
     const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'glad-invalid-dot-'))
     const dotPath = path.join(tempDir, 'invalid.dot')
+    const outputPath = path.join(tempDir, 'invalid.svg')
     fs.writeFileSync(dotPath, 'not a valid dot graph')
 
     try {
-      const result = runGlad([dotPath, '-s'])
+      const result = runGlad([dotPath, '-s', '-o', outputPath])
       assert.strictEqual(result.status, 2)
     } finally {
       fs.rmSync(tempDir, { force: true, recursive: true })

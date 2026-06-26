@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.5]  2026-06-26
+
+    - Ignore Swift `#Preview` macro blocks when collecting type definitions and usages to avoid false dependencies in SwiftUI projects
+    - Add regression coverage for generated demo app artifacts and refresh expected SVG outputs
+    - Update development dependencies and add an `npm run update` maintenance helper
+
 ## [1.4.4]  2026-06-08
 
     - Update tree-sitter to ^0.22.4 to align with tree-sitter-swift peer requirement

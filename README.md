@@ -15,6 +15,12 @@ View and Keep your project source files layer dependencies clean. Avoid circular
 * **Swift** - iOS/macOS projects using Tree-Sitter parsing
 * **DOT** - GraphViz DOT file input for custom diagrams
 
+### Swift Notes
+
+GLAD intentionally ignores type usages inside Swift `#Preview` macros when building the dependency graph.
+
+`#Preview` blocks are design-time SwiftUI/Xcode helpers, not production runtime dependencies. They often reference sample models, mocks, or views only to render local previews. Including those references would add preview-only edges to the graph and make orphan, upward-dependency, and circular-dependency signals noisier than the real application architecture.
+
 Simply launch the ```glad``` command and open the resulting ```glad.svg``` file.
 
 ## Example

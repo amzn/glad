@@ -224,4 +224,72 @@ public struct LonelyModel {
       }
     }
   })
+
+  it('should ignore type usages inside #Preview macros', function () {
+    const glad = new GLAD({
+      edges: Constants.EDGES_BOTH,
+      exclude: '**/*test*.js',
+      input: '.',
+      lineEffect: 'flat',
+      output: 'test/results/test_output_swift.svg',
+      silent: true
+    })
+
+    const swiftFiles = [
+      {
+        content: 'public struct DemoModel {}\n',
+        name: 'DemoModel.swift'
+      },
+      {
+        content: `
+import SwiftUI
+
+public struct ContentView: View {
+    public var body: some View {
+        Text("Hello")
+    }
+}
+
+#Preview {
+    Text(String(describing: DemoModel.self))
+}
+`,
+        name: 'ContentView.swift'
+      }
+    ]
+
+    const testDir = 'test_swift_preview_exclusion'
+    if (!fs.existsSync(testDir)) {
+      fs.mkdirSync(testDir)
+    }
+
+    const filePaths = []
+    swiftFiles.forEach(file => {
+      const filePath = path.join(testDir, file.name)
+      fs.writeFileSync(filePath, file.content)
+      filePaths.push(filePath)
+    })
+
+    try {
+      glad.swiftParser.processSwiftFiles(filePaths)
+
+      const previewDependencies = glad.allFileImports.filter(dep =>
+        dep.source.includes('ContentView') && dep.target.includes('DemoModel')
+      )
+
+      if (previewDependencies.length !== 0) {
+        throw new Error('Type usages inside #Preview should not create dependencies')
+      }
+    } finally {
+      swiftFiles.forEach(file => {
+        const filePath = path.join(testDir, file.name)
+        if (fs.existsSync(filePath)) {
+          fs.unlinkSync(filePath)
+        }
+      })
+      if (fs.existsSync(testDir)) {
+        fs.rmdirSync(testDir)
+      }
+    }
+  })
 })

@@ -6,7 +6,6 @@ documentation, we greatly value feedback and contributions from our community.
 Please read through this document before submitting any issues or pull requests to ensure we have all the necessary
 information to effectively respond to your bug report or contribution.
 
-
 ## Reporting Bugs/Feature Requests
 
 We welcome you to use the GitHub issue tracker to report bugs or suggest features.
@@ -19,8 +18,8 @@ reported the issue. Please try to include as much information as you can. Detail
 * Any modifications you've made relevant to the bug
 * Anything unusual about your environment or deployment
 
-
 ## Contributing via Pull Requests
+
 Contributions via pull requests are much appreciated. Before sending us a pull request, please ensure that:
 
 1. You are working against the latest source on the *main* branch.
@@ -39,20 +38,69 @@ To send us a pull request, please:
 GitHub provides additional document on [forking a repository](https://help.github.com/articles/fork-a-repo/) and
 [creating a pull request](https://help.github.com/articles/creating-a-pull-request/).
 
-
 ## Finding contributions to work on
+
 Looking at the existing issues is a great way to find something to contribute on. As our projects, by default, use the default GitHub issue labels (enhancement/bug/duplicate/help wanted/invalid/question/wont-fix), looking at any 'help wanted' issues is a great place to start.
 
+## Publishing a Release
+
+To publish a new version of `@jpdup/glad` to npm:
+
+1. **Ensure all changes are committed and tested:**
+
+   ```bash
+   npm run release
+   ```
+
+   This command runs the full pipeline: `npm install && depcheck . && eslint . --fix && mocha && npm run start`
+
+2. **Update version in package.json:**
+   * Update the `version` field to the new semantic version (e.g., `1.4.5`)
+   * Update `CHANGELOG.md` with a new entry describing the changes
+
+3. **Commit the version bump:**
+
+   ```bash
+   git add package.json package-lock.json CHANGELOG.md
+   git commit -m "chore(release): version X.Y.Z"
+   ```
+
+4. **Create a git tag:**
+
+   ```bash
+   git tag -a vX.Y.Z -m "Release version X.Y.Z"
+   ```
+
+5. **Push to repository:**
+
+   ```bash
+   git push origin main --tags
+   ```
+
+6. **Publish to npm:**
+
+   ```bash
+   npm publish
+   ```
+
+   You must have npm credentials configured. If publishing for the first time, authenticate with:
+
+   ```bash
+   npm login
+   ```
+
+7. **Verify the publication:**
+   Visit <https://www.npmjs.com/package/@jpdup/glad> to confirm the new version appears.
 
 ## Code of Conduct
+
 This project has adopted the [Amazon Open Source Code of Conduct](https://aws.github.io/code-of-conduct).
 For more information see the [Code of Conduct FAQ](https://aws.github.io/code-of-conduct-faq) or contact
-opensource-codeofconduct@amazon.com with any additional questions or comments.
-
+<opensource-codeofconduct@amazon.com> with any additional questions or comments.
 
 ## Security issue notifications
-If you discover a potential security issue in this project we ask that you notify AWS/Amazon Security via our [vulnerability reporting page](http://aws.amazon.com/security/vulnerability-reporting/). Please do **not** create a public GitHub issue.
 
+If you discover a potential security issue in this project we ask that you notify AWS/Amazon Security via our [vulnerability reporting page](http://aws.amazon.com/security/vulnerability-reporting/). Please do **not** create a public GitHub issue.
 
 ## Licensing
 

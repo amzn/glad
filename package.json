@@ -1,6 +1,6 @@
 {
-  "name": "@amazon/glad",
-  "version": "1.1.2",
+  "name": "@jpdup/glad",
+  "version": "1.4.5",
   "description": "Generate a Layer Diagram view of your source layers",
   "main": "cli/index.js",
   "author": "jp@vteam.com",
@@ -9,38 +9,42 @@
     "glad": "cli/index.js"
   },
   "type": "module",
-  "homepage": "https://github.com/amzn/generate-layer-architecture-diagram",
+  "homepage": "https://github.com/jpdup/glad",
   "repository": {
     "type": "git",
-    "url": "https://github.com/amzn/generate-layer-architecture-diagram"
+    "url": "git+https://github.com/jpdup/glad.git"
   },
   "keywords": [
     "amazon",
     "layer",
     "diagram",
     "architecture",
-    "validation"
+    "validation",
+    "nodejs",
+    "flutter",
+    "dart"
   ],
   "dependencies": {
-    "chalk": "^5.0.1",
-    "ts-morph": "^15.1.0",
-    "yargs": "^17.5.1"
+    "chalk": "^5.6.2",
+    "tree-sitter": "^0.22.4",
+    "tree-sitter-swift": "^0.7.1",
+    "ts-morph": "^28.0.0",
+    "yargs": "^18.0.0"
   },
   "devDependencies": {
-    "depcheck": "^1.4.2",
-    "eslint": "^8.21.0",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsdoc": "^39.3.4",
-    "eslint-plugin-n": "^15.2.4",
-    "eslint-plugin-promise": "^6.0.0",
-    "mocha": "^10.0.0"
+    "@eslint/js": "^10.0.1",
+    "depcheck": "^1.4.7",
+    "eslint": "^10.5.0",
+    "eslint-plugin-jsdoc": "^63.0.9",
+    "eslint-plugin-perfectionist": "^5.9.1",
+    "globals": "^17.7.0",
+    "mocha": "^11.7.6"
   },
   "scripts": {
     "test": "mocha",
-    "lint": "eslint .",
-    "lintfix": "eslint . --fix",
-    "release": "npm install && depcheck . && eslint . && mocha && npm run start",
-    "start": "node cli/index.js -sl -e **/demoApp*"
+    "lint": "eslint . --fix",
+    "release": "npm install && depcheck . && eslint . --fix && mocha && npm run start",
+    "start": "node cli/index.js -sld -e '**/demoApp/**' .",
+    "update": "npx npm-check-updates --interactive"
   }
 }
